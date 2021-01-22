@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 
 import HomePage from "./pages/HomePage";
 import MapPage from "./pages/MapPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Router>
         <HomePage path="/" />
         <MapPage path="/map" />
+        <NotFoundPage default />
       </Router>
     </section>
   );
