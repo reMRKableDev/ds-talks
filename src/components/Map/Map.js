@@ -2,8 +2,8 @@ import React, { useRef } from "react";
 import { MapContainer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
-import Layer from "./Layer";
-import MarkerIcon from "./MarkerIcon";
+import Layer from "../Layer/Layer";
+import MarkerIcon from "../MarkerIcon/MarkerIcon";
 
 const Map = () => {
   const mapReference = useRef();
