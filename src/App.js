@@ -1,17 +1,21 @@
 import "./App.css";
+import { Router } from "@reach/router";
+
+import Navbar from "./components/Navbar/Navbar";
 
 import HomePage from "./pages/HomePage";
+import MapPage from "./pages/MapPage";
 
 function App() {
   return (
-    <Router>
-      <section className="App">
-        <Switch>
+    <section className="App">
+      <Navbar />
 
-        </Switch>
-        <HomePage />
-      </section>
-    </Router>
+      <Router>
+        <HomePage path="/" />
+        <MapPage path="/map" />
+      </Router>
+    </section>
   );
 }
 
