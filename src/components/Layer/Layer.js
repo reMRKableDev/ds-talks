@@ -1,7 +1,7 @@
-import React from "react";
-import { TileLayer } from "react-leaflet";
+import React from 'react';
+import { TileLayer } from 'react-leaflet';
 
-import { mapTilerProvider } from "../../osm-providers";
+import { mapTilerProvider } from '../../osm-providers';
 
 const Layer = () => {
   const { url, attribution } = mapTilerProvider;

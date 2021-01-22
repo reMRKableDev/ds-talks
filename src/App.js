@@ -1,11 +1,11 @@
-import "./App.css";
-import { Router } from "@reach/router";
+import './App.css';
+import { Router } from '@reach/router';
 
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from './components/Navbar/Navbar';
 
-import HomePage from "./pages/HomePage";
-import MapPage from "./pages/MapPage";
-import NotFoundPage from "./pages/NotFoundPage";
+import HomePage from './pages/HomePage';
+import MapPage from './pages/MapPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
   return (

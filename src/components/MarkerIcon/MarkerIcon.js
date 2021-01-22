@@ -1,8 +1,8 @@
-import React from "react";
-import { Marker, Popup } from "react-leaflet";
-import { Icon } from "leaflet";
+import React from 'react';
+import { Marker, Popup } from 'react-leaflet';
+import { Icon } from 'leaflet';
 
-import PlayIcon from "../../assets/icons/play.png";
+import PlayIcon from '../../assets/icons/play.png';
 
 const icon = new Icon({
   iconUrl: PlayIcon,
