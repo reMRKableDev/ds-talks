@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import { TileLayer } from "react-leaflet";
+
+import { mapTilerProvider } from "../osm-providers";
 
 const Layer = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+  const { url, attribution } = mapTilerProvider;
 
-export default Layer
+  return <TileLayer url={url} attribution={attribution} />;
+};
+
+export default Layer;

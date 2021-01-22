@@ -1,16 +1,14 @@
 import React, { useRef } from "react";
-import { MapContainer, TileLayer } from "react-leaflet";
+import { MapContainer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
-import { mapTilerProvider } from "../osm-providers";
+import Layer from "./Layer";
 
 const Map = () => {
   const mapReference = useRef();
   const CENTER = { lat: 52.377956, lng: 4.89707 };
   const ZOOM_LEVEL = 3;
   const MAX_ZOOM = 18;
-
-  const { url, attribution } = mapTilerProvider;
 
   return (
     <MapContainer
@@ -19,7 +17,7 @@ const Map = () => {
       maxZoom={MAX_ZOOM}
       ref={mapReference}
     >
-      <TileLayer url={url} attribution={attribution} />
+      <Layer />
     </MapContainer>
   );
 };
