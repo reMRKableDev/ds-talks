@@ -3,6 +3,7 @@ import { MapContainer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
 import Layer from "./Layer";
+import MarkerIcon from "./MarkerIcon";
 
 const Map = () => {
   const mapReference = useRef();
@@ -18,6 +19,7 @@ const Map = () => {
       ref={mapReference}
     >
       <Layer />
+      <MarkerIcon />
     </MapContainer>
   );
 };
