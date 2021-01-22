@@ -4,7 +4,7 @@ import "leaflet/dist/leaflet.css";
 
 import { mapTilerProvider } from "../osm-providers";
 
-const LeafletMap = () => {
+const Map = () => {
   const mapReference = useRef();
   const CENTER = { lat: 52.377956, lng: 4.89707 };
   const ZOOM_LEVEL = 3;
@@ -24,4 +24,4 @@ const LeafletMap = () => {
   );
 };
 
-export default LeafletMap;
+export default Map;

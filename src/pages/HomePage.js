@@ -1,11 +1,11 @@
 import React from "react";
 
-import LeafletMap from "../components/LeafletMap";
+import Map from "../components/Map";
 
 const HomePage = () => {
   return (
     <>
-      <LeafletMap />
+      <Map />
     </>
   );
 };
