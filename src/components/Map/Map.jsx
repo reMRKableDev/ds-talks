@@ -12,12 +12,7 @@ const Map = () => {
   const MAX_ZOOM = 18;
 
   return (
-    <MapContainer
-      center={CENTER}
-      zoom={ZOOM_LEVEL}
-      maxZoom={MAX_ZOOM}
-      ref={mapReference}
-    >
+    <MapContainer center={CENTER} zoom={ZOOM_LEVEL} maxZoom={MAX_ZOOM}>
       <Layer />
       <MarkerIcon />
     </MapContainer>

@@ -1,0 +1,3 @@
+exports.testData = {
+  dummyText: 'Dummy',
+};
