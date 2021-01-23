@@ -7,22 +7,21 @@ import {
 } from '@reach/router';
 
 import App from './App';
+import validators from './utils/test-validators';
 
-import {
+const {
   validateNotEmptyData,
   validateStringMatches,
   validateElementContainsDescendant,
-} from './utils/test-validators';
+} = validators;
 
 const renderComponentWithRouter = (
   ui,
   { route = '/', history = createHistory(createMemorySource(route)) } = {}
-) => {
-  return {
-    ...render(<LocationProvider history={history}>{ui}</LocationProvider>),
-    history,
-  };
-};
+) => ({
+  ...render(<LocationProvider history={history}>{ui}</LocationProvider>),
+  history,
+});
 
 describe('App.js Test Suite', () => {
   test('should validate full rendering/navigating of app', async () => {
@@ -30,6 +29,8 @@ describe('App.js Test Suite', () => {
       container,
       history: { navigate },
     } = renderComponentWithRouter(<App />);
+
+    expect(1).toBe(1)
 
     const appContainer = container;
 
@@ -42,10 +43,11 @@ describe('App.js Test Suite', () => {
     validateElementContainsDescendant(navigationBar, homeLink);
     validateElementContainsDescendant(navigationBar, mapLink);
 
-    const { innerHTML } = appContainer;
-
-    validateStringMatches(innerHTML, 'Welcome! Check out the map');
+    validateStringMatches(appContainer.innerHTML, 'Welcome! Check out the map');
 
     await navigate('/map');
+
+    validateStringMatches(container.innerHTML, "See map for all episodes")
+
   });
 });
