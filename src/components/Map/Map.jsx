@@ -19,7 +19,6 @@ const Map = () => {
         <MarkerIcon />
       </MapContainer>
     </section>
-
   );
 };
 

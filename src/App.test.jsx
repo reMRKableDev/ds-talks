@@ -30,7 +30,7 @@ describe('App.js Test Suite', () => {
       history: { navigate },
     } = renderComponentWithRouter(<App />);
 
-    expect(1).toBe(1)
+    expect(1).toBe(1);
 
     const appContainer = container;
 
@@ -47,7 +47,6 @@ describe('App.js Test Suite', () => {
 
     await navigate('/map');
 
-    validateStringMatches(container.innerHTML, "See map for all episodes")
-
+    validateStringMatches(container.innerHTML, 'See map for all episodes');
   });
 });
