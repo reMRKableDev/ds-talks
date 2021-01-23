@@ -16,6 +16,6 @@ const MarkerIcon = () => (
       <p>popup</p>
     </Popup>
   </Marker>
-  );
+);
 
 export default MarkerIcon;
