@@ -5,9 +5,9 @@
     "jest/globals": true
   },
   "extends": [
-    "plugin:react/recommended",
     "airbnb",
-    "prettier",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
     "plugin:jest/recommended"
   ],
   "parserOptions": {
