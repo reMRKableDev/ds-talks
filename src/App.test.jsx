@@ -48,5 +48,9 @@ describe('App.js Test Suite', () => {
     await navigate('/map');
 
     validateStringMatches(container.innerHTML, 'See map for all episodes');
+
+    await navigate('/dummy');
+
+    validateStringMatches(container.innerHTML, 'Sorry, Page not found!')
   });
 });
