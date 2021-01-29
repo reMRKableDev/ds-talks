@@ -18,5 +18,20 @@
     "sourceType": "module"
   },
   "plugins": ["react", "prettier"],
-  "rules": {}
+  "rules": {
+    "jest/expect-expect": [
+      "error",
+      {
+        "assertFunctionNames": [
+          "expect",
+          "validateTypeOf",
+          "validateInstanceOf",
+          "validateNotEmptyData",
+          "validateStringMatches",
+          "validateToHaveProperty",
+          "validateElementContainsDescendant"
+        ]
+      }
+    ]
+  }
 }

@@ -20,6 +20,25 @@ const validators = {
     expect(parentElement).not.toContainElement(dummyElement);
     expect(parentElement).toContainElement(descendantElement);
   },
+
+  validateTypeOf: (received, expected) => {
+    expect(typeof received).not.toBe('dummyType');
+    expect(typeof received).toEqual(expected);
+  },
+
+  validateInstanceOf: (received, expected) => {
+    function DummyInstance(dummy) {
+      this.dummy = dummy;
+    }
+
+    expect(received instanceof DummyInstance).toBe(false);
+    expect(received instanceof expected).toBe(true);
+  },
+
+  validateToHaveProperty: (received, data) => {
+    expect(received).not.toHaveProperty('dummy');
+    expect(received).toHaveProperty(data);
+  },
 };
 
 export default validators;

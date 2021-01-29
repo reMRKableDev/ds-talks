@@ -44,6 +44,7 @@
       "src/**/*.{js,jsx}"
     ],
     "coveragePathIgnorePatterns": [
+      "utils/*",
       "src/index.jsx",
       "reportWebVitals.js",
       "setupTests.js"
