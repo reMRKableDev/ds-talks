@@ -56,6 +56,11 @@ const validators = {
     expect(receivedMock).not.toHaveBeenCalledWith(1000000);
     expect(receivedMock).toHaveBeenCalledWith(apiUrl);
   },
+
+  validateArrayToHaveLength: (received, expectedLength) => {
+    expect(received).toHaveLength(expectedLength);
+    expect(received).not.toHaveLength(1000000);
+  },
 };
 
 export default validators;
