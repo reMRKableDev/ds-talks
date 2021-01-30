@@ -25,7 +25,9 @@
       {
         "assertFunctionNames": [
           "expect",
+
           "validateTypeOf",
+          "validateMockCalls",
           "validateInstanceOf",
           "validateNotEmptyData",
           "validateStringMatches",

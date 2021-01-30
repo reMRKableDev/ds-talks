@@ -39,6 +39,23 @@ const validators = {
     expect(received).not.toHaveProperty('dummy');
     expect(received).toHaveProperty(data);
   },
+
+  validateArrayContaining: (receivedArray, expectedArray) => {
+    expect(receivedArray).not.toEqual(
+      expect.arrayContaining(['dummy', 'fake', 'false'])
+    );
+    expect(receivedArray).toEqual(expect.arrayContaining(expectedArray));
+  },
+
+  validateMockCalls: (receivedMock, numberOfCalls) => {
+    expect(receivedMock).not.toHaveBeenCalledTimes(1000000);
+    expect(receivedMock).toHaveBeenCalledTimes(numberOfCalls);
+  },
+
+  validateMockToHaveBeenCalledWith: (receivedMock, apiUrl) => {
+    expect(receivedMock).not.toHaveBeenCalledWith(1000000);
+    expect(receivedMock).toHaveBeenCalledWith(apiUrl);
+  },
 };
 
 export default validators;

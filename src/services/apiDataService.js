@@ -10,10 +10,13 @@ class ApiDataService {
     });
   }
 
-  getAllEpisodes = () =>
-    this.service
-      .get('https://www.buzzsprout.com/api/1078358/episodes.json')
-      .then((response) => response);
+  async getAllEpisodes() {
+    const response = await this.service.get(
+      'https://www.buzzsprout.com/api/1078358/episodes.json'
+    );
+
+    return response.data;
+  }
 }
 
 export default ApiDataService;
