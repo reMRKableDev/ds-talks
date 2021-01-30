@@ -20,7 +20,6 @@ const Map = () => {
   const CENTER = { lat: 52.377956, lng: 4.89707 };
   const ZOOM_LEVEL = 3;
   const MAX_ZOOM = 18;
-  const test = episodesList;
 
   useEffect(async () => {
     const podcastService = new ApiDataService();
@@ -45,7 +44,7 @@ const Map = () => {
 
       <MapContainer center={CENTER} zoom={ZOOM_LEVEL} maxZoom={MAX_ZOOM}>
         <Layer />
-        <MarkerIcon test={test} />
+        <MarkerIcon episodesList={episodesList} />
       </MapContainer>
     </section>
   );

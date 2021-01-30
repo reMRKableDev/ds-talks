@@ -10,12 +10,13 @@ const icon = new Icon({
   popupAnchor: [3, -45],
 });
 
-const MarkerIcon = () => (
-  <Marker position={[52.377956, 4.89707]} icon={icon}>
-    <Popup>
-      <p>popup</p>
-    </Popup>
-  </Marker>
-);
+const MarkerIcon = ({ episodesList }) =>
+  episodesList.map((episodeItem) => (
+    <Marker position={episodeItem.coordinates} icon={icon} key={episodeItem.id}>
+      <Popup>
+        <p>{episodeItem.title}</p>
+      </Popup>
+    </Marker>
+  ));
 
 export default MarkerIcon;
