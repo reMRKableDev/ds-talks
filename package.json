@@ -7,7 +7,7 @@
     "@testing-library/jest-dom": "5.11.9",
     "@testing-library/react": "11.2.3",
     "@testing-library/user-event": "12.6.2",
-    "jest-extended": "0.11.5",
+    "axios": "0.21.1",
     "leaflet": "1.7.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
@@ -45,6 +45,7 @@
       "src/**/*.{js,jsx}"
     ],
     "coveragePathIgnorePatterns": [
+      "utils/*",
       "src/index.jsx",
       "reportWebVitals.js",
       "setupTests.js"
@@ -59,6 +60,7 @@
     }
   },
   "devDependencies": {
+    "babel-eslint": "10.1.0",
     "eslint": "7.18.0",
     "eslint-config-airbnb": "18.2.1",
     "eslint-config-prettier": "7.2.0",

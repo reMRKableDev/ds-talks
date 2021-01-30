@@ -9,6 +9,9 @@ import {
 import App from './App';
 import validators from './utils/test-validators';
 
+jest.mock('./services/apiDataService');
+jest.mock('./components/Map/helpers');
+
 const {
   validateNotEmptyData,
   validateStringMatches,
@@ -30,8 +33,6 @@ describe('App.js Test Suite', () => {
       history: { navigate },
     } = renderComponentWithRouter(<App />);
 
-    expect(1).toBe(1);
-
     const appContainer = container;
 
     validateNotEmptyData(appContainer);
@@ -51,6 +52,6 @@ describe('App.js Test Suite', () => {
 
     await navigate('/dummy');
 
-    validateStringMatches(container.innerHTML, 'Sorry, Page not found!')
+    validateStringMatches(container.innerHTML, 'Sorry, Page not found!');
   });
 });
