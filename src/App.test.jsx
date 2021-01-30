@@ -33,8 +33,6 @@ describe('App.js Test Suite', () => {
       history: { navigate },
     } = renderComponentWithRouter(<App />);
 
-    expect(1).toBe(1);
-
     const appContainer = container;
 
     validateNotEmptyData(appContainer);
