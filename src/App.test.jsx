@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import {
   createHistory,
   createMemorySource,
@@ -8,9 +8,11 @@ import {
 
 import App from './App';
 import validators from './utils/test-validators';
+// import MarkerIcon from "./components/MarkerIcon/MarkerIcon"
 
 jest.mock('./services/apiDataService');
 jest.mock('./components/Map/helpers');
+// jest.mock('./components/MarkerIcon/MarkerIcon');
 
 const {
   validateNotEmptyData,
@@ -47,6 +49,8 @@ describe('App.js Test Suite', () => {
     validateStringMatches(appContainer.innerHTML, 'Welcome! Check out the map');
 
     await navigate('/map');
+
+    console.log(container);
 
     validateStringMatches(container.innerHTML, 'See map for all episodes');
 

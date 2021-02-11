@@ -12,7 +12,12 @@ const icon = new Icon({
 
 const MarkerIcon = ({ episodesList }) =>
   episodesList.map((episodeItem) => (
-    <Marker position={episodeItem.coordinates} icon={icon} key={episodeItem.id}>
+    <Marker
+      data-testid="episode-title"
+      position={episodeItem.coordinates}
+      icon={icon}
+      key={episodeItem.id}
+    >
       <Popup>
         <p>{episodeItem.title}</p>
       </Popup>
