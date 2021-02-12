@@ -36,7 +36,7 @@ const Map = () => {
     );
 
     setEpisodesList(episodeListWithGuestLocationClean);
-  }, []);
+  }, [episodesList]);
 
   return (
     <section>

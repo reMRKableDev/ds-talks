@@ -13,15 +13,15 @@ const {
 
 let getData;
 
+beforeEach(() => {
+  getData = mockAxios.get;
+});
+
+afterEach(() => {
+  jest.clearAllMocks();
+});
+
 describe('API Data Service Test Suite', () => {
-  beforeEach(() => {
-    getData = mockAxios.get;
-  });
-
-  afterEach(() => {
-    jest.clearAllMocks();
-  });
-
   test('should validate', async () => {
     getData.mockImplementationOnce(() =>
       Promise.resolve({ data: fakeUserList })
