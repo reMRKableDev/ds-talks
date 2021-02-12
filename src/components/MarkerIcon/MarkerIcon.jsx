@@ -1,5 +1,6 @@
 import React from 'react';
 import { Marker, Popup } from 'react-leaflet';
+
 import leafletIcon from './LeafletIcon/LeafletIcon';
 
 const MarkerIcon = ({ episodesList }) =>
