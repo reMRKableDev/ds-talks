@@ -40,12 +40,7 @@ const Map = () => {
 
   return (
     <section className="main-container">
-      <MapContainer
-        center={CENTER}
-        zoom={ZOOM_LEVEL}
-        maxZoom={MAX_ZOOM}
-        trackResize
-      >
+      <MapContainer center={CENTER} zoom={ZOOM_LEVEL} maxZoom={MAX_ZOOM}>
         <Layer />
         <MarkerIcon episodesList={episodesList} />
       </MapContainer>
