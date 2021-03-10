@@ -3,6 +3,11 @@
 }
 
 .leaflet-container {
-  height: 90vh;
+  border: 3px solid #000;
+  height: 70vh;
   width: 100%;
+}
+
+.main-container {
+  padding: 5px;
 }
