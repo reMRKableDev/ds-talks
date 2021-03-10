@@ -5,7 +5,7 @@ import { PodcastEpisodesContext } from '../../contexts/PodcastEpisodesContext';
 import leafletIcon from './LeafletIcon/LeafletIcon';
 
 const MarkerIcon = () => {
-  const { episodesList } = useContext(PodcastEpisodesContext);
+  const { episodesList, selectEpisode } = useContext(PodcastEpisodesContext);
 
   return (
     episodesList &&
@@ -18,6 +18,9 @@ const MarkerIcon = () => {
       >
         <Popup>
           <p>{episodeItem.title}</p>
+          <button type="button" onClick={() => selectEpisode(episodeItem)}>
+            Listen
+          </button>
         </Popup>
       </Marker>
     ))

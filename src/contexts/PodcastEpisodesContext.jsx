@@ -14,6 +14,7 @@ export const PodcastEpisodesContext = createContext();
 
 export const PodcastEpisodesContextProvider = ({ children }) => {
   const [episodesList, setEpisodesList] = useState([]);
+  const [selectedEpisode, setSelectedEpisode] = useState({});
 
   useEffect(async () => {
     const podcastService = new ApiDataService();
@@ -32,8 +33,18 @@ export const PodcastEpisodesContextProvider = ({ children }) => {
     setEpisodesList(episodeListWithGuestLocationClean);
   }, [episodesList]);
 
+  const selectEpisode = (incomingEpisode) => {
+    const foundEpisode = episodesList.find(
+      (episodeItem) => episodeItem.id === incomingEpisode.id
+    );
+
+    setSelectedEpisode(foundEpisode);
+  };
+
   return (
-    <PodcastEpisodesContext.Provider value={{ episodesList }}>
+    <PodcastEpisodesContext.Provider
+      value={{ episodesList, selectEpisode, selectedEpisode }}
+    >
       {children}
     </PodcastEpisodesContext.Provider>
   );
