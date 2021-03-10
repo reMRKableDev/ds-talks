@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 
-const Player = () => (
-  <AudioPlayer src="https://www.buzzsprout.com/1078358/7235866-39-kizomba-harmony-on-the-mission-to-create-the-future-kizomba-scene.mp3" />
-);
+import { PodcastEpisodesContext } from '../../contexts/PodcastEpisodesContext';
+
+const Player = () => {
+  const { selectedEpisode } = useContext(PodcastEpisodesContext);
+
+  const { audio_url: url, episode_number: number, artist } = selectedEpisode;
+
+  return (
+    <AudioPlayer
+      src={url}
+      header={number && artist ? `${number} ${artist}` : null}
+    />
+  );
+};
 
 export default Player;
