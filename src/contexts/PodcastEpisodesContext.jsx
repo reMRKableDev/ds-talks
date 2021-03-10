@@ -1,4 +1,5 @@
 import React, { useState, useEffect, createContext } from 'react';
+import PropTypes from 'prop-types';
 
 import ApiDataService from '../services/apiDataService';
 import guestLocationList from '../data/guestData';
@@ -32,8 +33,12 @@ export const PodcastEpisodesContextProvider = ({ children }) => {
   }, [episodesList]);
 
   return (
-    <PodcastEpisodesContext.Provider value={episodesList}>
+    <PodcastEpisodesContext.Provider value={{ episodesList }}>
       {children}
     </PodcastEpisodesContext.Provider>
   );
+};
+
+PodcastEpisodesContextProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };
