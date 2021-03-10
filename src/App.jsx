@@ -8,16 +8,20 @@ import HomePage from './pages/HomePage';
 import MapPage from './pages/MapPage';
 import NotFoundPage from './pages/NotFoundPage';
 
+import { PodcastEpisodesContextProvider } from './contexts/PodcastEpisodesContext';
+
 function App() {
   return (
     <section className="App">
-      <Navbar />
+      <PodcastEpisodesContextProvider>
+        <Navbar />
 
-      <Router>
-        <HomePage path="/" />
-        <MapPage path="/map" />
-        <NotFoundPage default />
-      </Router>
+        <Router>
+          <HomePage path="/" />
+          <MapPage path="/map" />
+          <NotFoundPage default />
+        </Router>
+      </PodcastEpisodesContextProvider>
     </section>
   );
 }

@@ -1,10 +1,14 @@
 import React from 'react';
-import { Marker, Popup } from 'react-leaflet';
+// import { Marker, Popup } from 'react-leaflet';
 
-import leafletIcon from './LeafletIcon/LeafletIcon';
+// import leafletIcon from './LeafletIcon/LeafletIcon';
 
-const MarkerIcon = ({ episodesList }) =>
-  episodesList.map((episodeItem) => (
+const MarkerIcon = () => (
+  <div>
+    <h1>hello</h1>
+  </div>
+);
+/* episodesList.map((episodeItem) => (
     <Marker
       data-testid="episode-title"
       position={episodeItem.coordinates}
@@ -15,6 +19,6 @@ const MarkerIcon = ({ episodesList }) =>
         <p>{episodeItem.title}</p>
       </Popup>
     </Marker>
-  ));
+  )); */
 
 export default MarkerIcon;
