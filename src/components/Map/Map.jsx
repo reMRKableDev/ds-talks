@@ -18,6 +18,7 @@ const Map = () => {
         zoom={ZOOM_LEVEL}
         maxZoom={MAX_ZOOM}
         minZoom={MIN_ZOOM}
+        scrollWheelZoom={false}
       >
         <Layer />
         <MarkerIcon />
