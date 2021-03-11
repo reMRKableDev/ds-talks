@@ -5,16 +5,14 @@ const addCoordinatesToEachEpisodeResult = (
   return allEpisodesList.map((episodeItem) => {
     let episodeItemWithGuestLocation;
 
-    for (let counter = 0; counter < guestLocationList.length; counter += 1) {
-      const guestItem = guestLocationList[counter];
-
+    guestLocationList.forEach((guestItem) => {
       if (episodeItem.artist === guestItem.name) {
         episodeItemWithGuestLocation = {
           ...episodeItem,
           coordinates: guestItem.coordinates,
         };
       }
-    }
+    });
 
     return episodeItemWithGuestLocation;
   });
