@@ -17,8 +17,8 @@ const MapPage = () => {
 
   return (
     <>
-      <Map />
       {!isEmptyObject(episodeDetails) && <EpisodeDetails />}
+      <Map />
       {audioPlayerVisibility && <Player />}
     </>
   );
