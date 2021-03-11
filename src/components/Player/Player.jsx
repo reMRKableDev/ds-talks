@@ -4,7 +4,7 @@ import 'react-h5-audio-player/lib/styles.css';
 
 import { PodcastEpisodesContext } from '../../contexts/PodcastEpisodesContext';
 
-import QuitPlayerButton from './QuitPlayerButton';
+import QuitPlayerButton from '../QuitPlayerButton/QuitPlayerButton';
 
 const Player = () => {
   const { selectedEpisode } = useContext(PodcastEpisodesContext);
