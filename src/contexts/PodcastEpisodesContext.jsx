@@ -15,6 +15,7 @@ export const PodcastEpisodesContext = createContext();
 export const PodcastEpisodesContextProvider = ({ children }) => {
   const [episodesList, setEpisodesList] = useState([]);
   const [selectedEpisode, setSelectedEpisode] = useState({});
+  const [audioPlayerVisibility, setAudioPlayerVisibility] = useState(false);
 
   useEffect(async () => {
     const podcastService = new ApiDataService();
@@ -39,11 +40,20 @@ export const PodcastEpisodesContextProvider = ({ children }) => {
     );
 
     setSelectedEpisode(foundEpisode);
+    setAudioPlayerVisibility(true);
   };
+
+  const quitAudioPlayer = () => setAudioPlayerVisibility(false);
 
   return (
     <PodcastEpisodesContext.Provider
-      value={{ episodesList, selectEpisode, selectedEpisode }}
+      value={{
+        episodesList,
+        selectEpisode,
+        quitAudioPlayer,
+        selectedEpisode,
+        audioPlayerVisibility,
+      }}
     >
       {children}
     </PodcastEpisodesContext.Provider>

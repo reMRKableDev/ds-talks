@@ -4,15 +4,21 @@ import 'react-h5-audio-player/lib/styles.css';
 
 import { PodcastEpisodesContext } from '../../contexts/PodcastEpisodesContext';
 
+import QuitPlayerButton from './QuitPlayerButton';
+
 const Player = () => {
   const { selectedEpisode } = useContext(PodcastEpisodesContext);
-
   const { audio_url: url, episode_number: number, artist } = selectedEpisode;
 
   return (
     <AudioPlayer
+      autoPlay
+      loop
       src={url}
-      header={number && artist ? `${number} ${artist}` : null}
+      layout="horizontal"
+      customAdditionalControls={[]}
+      header={number && artist ? `Episode #${number} with ${artist}` : null}
+      footer={<QuitPlayerButton />}
     />
   );
 };
