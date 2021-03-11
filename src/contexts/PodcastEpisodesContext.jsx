@@ -7,6 +7,7 @@ import helperFunctions from '../helpers';
 
 const {
   addCoordinatesToEachEpisodeResult,
+  findIncomingEpisodeInEpisodeList,
   removeFalsyValuesFromTheList,
 } = helperFunctions;
 
@@ -15,6 +16,7 @@ export const PodcastEpisodesContext = createContext();
 export const PodcastEpisodesContextProvider = ({ children }) => {
   const [episodesList, setEpisodesList] = useState([]);
   const [selectedEpisode, setSelectedEpisode] = useState({});
+  const [episodeDetails, setEpisodeDetails] = useState({});
   const [audioPlayerVisibility, setAudioPlayerVisibility] = useState(false);
 
   useEffect(async () => {
@@ -35,8 +37,9 @@ export const PodcastEpisodesContextProvider = ({ children }) => {
   }, [episodesList]);
 
   const selectEpisode = (incomingEpisode) => {
-    const foundEpisode = episodesList.find(
-      (episodeItem) => episodeItem.id === incomingEpisode.id
+    const foundEpisode = findIncomingEpisodeInEpisodeList(
+      episodesList,
+      incomingEpisode
     );
 
     setSelectedEpisode(foundEpisode);
@@ -45,13 +48,27 @@ export const PodcastEpisodesContextProvider = ({ children }) => {
 
   const quitAudioPlayer = () => setAudioPlayerVisibility(false);
 
+  const renderEpisodeDetails = (incomingEpisode) => {
+    const foundEpisode = findIncomingEpisodeInEpisodeList(
+      episodesList,
+      incomingEpisode
+    );
+
+    setEpisodeDetails(foundEpisode);
+  };
+
+  const closeEpisodeDetails = () => setEpisodeDetails({});
+
   return (
     <PodcastEpisodesContext.Provider
       value={{
         episodesList,
         selectEpisode,
+        episodeDetails,
         quitAudioPlayer,
         selectedEpisode,
+        closeEpisodeDetails,
+        renderEpisodeDetails,
         audioPlayerVisibility,
       }}
     >
