@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Marker, Popup } from 'react-leaflet';
 
 import { PodcastEpisodesContext } from '../../contexts/PodcastEpisodesContext';
-import leafletIcon from './LeafletIcon/LeafletIcon';
+import leafletIcon from '../LeafletIcon/LeafletIcon';
 
 const MarkerIcon = () => {
   const { episodesList, selectEpisode } = useContext(PodcastEpisodesContext);

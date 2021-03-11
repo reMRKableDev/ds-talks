@@ -19,6 +19,7 @@ const Map = () => {
         maxZoom={MAX_ZOOM}
         minZoom={MIN_ZOOM}
         scrollWheelZoom={false}
+        worldCopyJump
       >
         <Layer />
         <MarkerIcon />

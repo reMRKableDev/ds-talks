@@ -1,6 +1,6 @@
 import { Icon } from 'leaflet';
 import leafletIcon from './LeafletIcon';
-import validators from '../../../utils/test-validators';
+import validators from '../../utils/test-validators';
 
 const {
   validateInstanceOf,

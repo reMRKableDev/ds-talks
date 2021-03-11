@@ -1,6 +1,6 @@
 import { Icon } from 'leaflet';
 
-import PlayIcon from '../../../assets/icons/play.png';
+import PlayIcon from '../../assets/icons/play.png';
 
 const leafletIcon = new Icon({
   iconUrl: PlayIcon,
