@@ -21,7 +21,18 @@ const addCoordinatesToEachEpisodeResult = (
 const removeFalsyValuesFromTheList = (episodeListWithGuestLocation) =>
   episodeListWithGuestLocation.filter((element) => element != null);
 
+const findIncomingEpisodeInEpisodeList = (episodesList, incomingEpisode) =>
+  episodesList.find((episodeItem) => episodeItem.id === incomingEpisode.id);
+
+const isEmptyObject = (incomingObj) => Object.keys(incomingObj).length === 0;
+
+const removeAnyHTMLTagsFromString = (incomingStr) =>
+  incomingStr.replace(/(<([^>]+)>)/gi, '');
+
 export default {
-  addCoordinatesToEachEpisodeResult,
+  isEmptyObject,
+  removeAnyHTMLTagsFromString,
   removeFalsyValuesFromTheList,
+  findIncomingEpisodeInEpisodeList,
+  addCoordinatesToEachEpisodeResult,
 };
