@@ -6,13 +6,13 @@ import './Navbar.css';
 import BurgerIcon from '../../assets/icons/menu.svg';
 import CrossIcon from '../../assets/icons/close.svg';
 
-const customNavIcon = (icon) => <img src={icon} alt="nav-icon" />;
+const renderCustomNavIcon = (icon) => <img src={icon} alt="nav-icon" />;
 
 const Navbar = () => (
   <nav>
     <Menu
-      customBurgerIcon={customNavIcon(BurgerIcon)}
-      customCrossIcon={customNavIcon(CrossIcon)}
+      customBurgerIcon={renderCustomNavIcon(BurgerIcon)}
+      customCrossIcon={renderCustomNavIcon(CrossIcon)}
     >
       <Link to="/" data-testid="home-link">
         Home
@@ -21,9 +21,6 @@ const Navbar = () => (
         See Map
       </Link>
     </Menu>
-    <div>
-      <h1>Dance Specific Talks</h1>
-    </div>
   </nav>
 );
 
