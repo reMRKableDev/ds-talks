@@ -15,8 +15,9 @@ export const PodcastEpisodesContext = createContext();
 
 export const PodcastEpisodesContextProvider = ({ children }) => {
   const [episodesList, setEpisodesList] = useState([]);
-  const [selectedEpisode, setSelectedEpisode] = useState({});
   const [episodeDetails, setEpisodeDetails] = useState({});
+  // const [menuOpenState, setMenuOpenState] = useState(false);
+  const [selectedEpisode, setSelectedEpisode] = useState({});
   const [audioPlayerVisibility, setAudioPlayerVisibility] = useState(false);
 
   useEffect(async () => {

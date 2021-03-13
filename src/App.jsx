@@ -11,7 +11,7 @@ import { PodcastEpisodesContextProvider } from './contexts/PodcastEpisodesContex
 
 function App() {
   return (
-    <section>
+    <>
       <PodcastEpisodesContextProvider>
         <Navbar />
 
@@ -21,7 +21,7 @@ function App() {
           <NotFoundPage default />
         </Router>
       </PodcastEpisodesContextProvider>
-    </section>
+    </>
   );
 }
 
