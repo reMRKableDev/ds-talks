@@ -8,20 +8,23 @@ import CrossIcon from '../../assets/icons/close.svg';
 
 const renderCustomNavIcon = (icon) => <img src={icon} alt="nav-icon" />;
 
-const Navbar = () => (
-  <nav>
-    <Menu
-      customBurgerIcon={renderCustomNavIcon(BurgerIcon)}
-      customCrossIcon={renderCustomNavIcon(CrossIcon)}
-    >
-      <Link to="/" data-testid="home-link">
-        Home
-      </Link>
-      <Link to="map" data-testid="map-link">
-        See Map
-      </Link>
-    </Menu>
-  </nav>
-);
+const Navbar = () => {
+  return (
+    <nav>
+      <Menu
+        customBurgerIcon={renderCustomNavIcon(BurgerIcon)}
+        customCrossIcon={renderCustomNavIcon(CrossIcon)}
+        width="70%"
+      >
+        <Link to="/" data-testid="home-link">
+          Home
+        </Link>
+        <Link to="map" data-testid="map-link">
+          See Map
+        </Link>
+      </Menu>
+    </nav>
+  );
+};
 
 export default Navbar;
