@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from '@reach/router';
-import { bubble as Menu } from 'react-burger-menu';
+import { slide as Menu } from 'react-burger-menu';
 import './Navbar.css';
 
 import BurgerIcon from '../../assets/icons/menu.svg';
