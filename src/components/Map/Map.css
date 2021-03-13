@@ -1,9 +1,3 @@
-@import-normalize;
-
-.App {
-  text-align: center;
-}
-
 .leaflet-container {
   border: 3px solid #000;
   height: 70vh;
