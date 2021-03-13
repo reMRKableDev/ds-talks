@@ -1,15 +1,17 @@
 import React from 'react';
 import { Link } from '@reach/router';
+import { slide as Menu } from 'react-burger-menu';
+import './Navbar.css';
 
 const Navbar = () => (
-  <nav data-testid="navigation-bar">
+  <Menu data-testid="navigation-bar">
     <Link to="/" data-testid="home-link">
       Home
     </Link>
     <Link to="map" data-testid="map-link">
       See Map
     </Link>
-  </nav>
+  </Menu>
 );
 
 export default Navbar;
