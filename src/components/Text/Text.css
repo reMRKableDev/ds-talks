@@ -22,6 +22,7 @@
 
   .text-section p {
     font-size: 1.125em;
+    text-transform: capitalize;
   }
 }
 
