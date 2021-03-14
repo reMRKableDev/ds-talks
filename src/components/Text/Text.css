@@ -1,0 +1,46 @@
+.text-section {
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 1.875em;
+}
+
+.text-section h2 {
+  font-size: 1.8em;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) {
+  .text-section h2 {
+    font-size: 2em;
+  }
+
+  .text-section p {
+    font-size: 1.125em;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  .text-section {
+    height: 25vh;
+  }
+
+  .text-section h2 {
+    font-size: 4em;
+  }
+
+  .text-section p {
+    font-size: 1.5em;
+  }
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */
+}
