@@ -1,4 +1,5 @@
 import React from 'react';
+import './Map.css';
 import { MapContainer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 

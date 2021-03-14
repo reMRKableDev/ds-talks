@@ -1,0 +1,9 @@
+.title-container {
+  text-align: right;
+  padding: 0.67em;
+}
+
+.title-container h1 {
+  font-size: 1.5em;
+  text-transform: uppercase;
+}

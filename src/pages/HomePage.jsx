@@ -1,5 +1,11 @@
 import React from 'react';
 
-const HomePage = () => <div> Welcome! Check out the map </div>;
+import Hero from '../components/Hero/Hero';
+
+const HomePage = () => (
+  <>
+    <Hero />
+  </>
+);
 
 export default HomePage;

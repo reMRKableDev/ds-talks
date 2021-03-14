@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import { Router } from '@reach/router';
 
 import Navbar from './components/Navbar/Navbar';
@@ -12,7 +11,7 @@ import { PodcastEpisodesContextProvider } from './contexts/PodcastEpisodesContex
 
 function App() {
   return (
-    <section className="App">
+    <>
       <PodcastEpisodesContextProvider>
         <Navbar />
 
@@ -22,7 +21,7 @@ function App() {
           <NotFoundPage default />
         </Router>
       </PodcastEpisodesContextProvider>
-    </section>
+    </>
   );
 }
 
