@@ -9,6 +9,7 @@ const HomePage = () => (
     <Hero />
     <Text />
     <About />
+    <Text />
   </>
 );
 
