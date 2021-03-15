@@ -1,46 +1,48 @@
 .description-section {
-  height: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.description-text p {
+.description-image {
+  align-items: center;
+  justify-content: center;
+}
+
+.description-image > figure {
+  width: 100px;
+  height: 100px;
+}
+
+.description-image > figure > img {
+  width: 100%;
+}
+
+.description-text > p {
   font-size: 1.2em;
   text-transform: capitalize;
-}
-
-.description-image figure,
-.description-text p {
   padding: 1em;
+  text-align: center;
 }
 
-@-webkit-keyframes animate {
-  25%,
-  75% {
-    opacity: 0;
-  }
-  50% {
-    content: 'where dancers can share their stories.';
-    opacity: 1;
-  }
-  100% {
-    content: 'Dance Specific Talks is a unique podcast,';
-  }
+.description-text > p > mark {
+  color: #fff;
+  border-radius: 0.8em 0.3em;
+  background: transparent;
+  background-image: linear-gradient(
+    to right,
+    rgba(252, 128, 45, 1),
+    rgba(253, 38, 71, 1)
+  );
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  margin: 0 -0.2em;
+  padding: 0.1em 0.4em;
 }
 
-@keyframes animate {
-  25%,
-  75% {
-    opacity: 0;
-  }
-  50% {
-    content: 'where dancers can share their stories.';
-    opacity: 1;
-  }
-  100% {
-    content: 'Dance Specific Talks is a unique podcast,';
-  }
+.description-text > p > mark > span {
+  text-transform: uppercase;
+  font-weight: 900;
 }
 
 /* iPads (portrait and landscape) ----------- */
