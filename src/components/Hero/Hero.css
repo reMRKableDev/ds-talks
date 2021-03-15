@@ -1,6 +1,7 @@
 .hero-section {
   margin-bottom: 3em;
 }
+
 .hero-container {
   width: 100vw;
 }
@@ -15,6 +16,7 @@
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 768px) {
+  /* Styles */
 }
 
 /* Desktops and laptops ----------- */
