@@ -1,0 +1,63 @@
+.description-section {
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.description-text p {
+  font-size: 1.2em;
+  text-transform: capitalize;
+}
+
+.description-image figure,
+.description-text p {
+  padding: 1em;
+}
+
+@-webkit-keyframes animate {
+  25%,
+  75% {
+    opacity: 0;
+  }
+  50% {
+    content: 'where dancers can share their stories.';
+    opacity: 1;
+  }
+  100% {
+    content: 'Dance Specific Talks is a unique podcast,';
+  }
+}
+
+@keyframes animate {
+  25%,
+  75% {
+    opacity: 0;
+  }
+  50% {
+    content: 'where dancers can share their stories.';
+    opacity: 1;
+  }
+  100% {
+    content: 'Dance Specific Talks is a unique podcast,';
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) {
+  .description-text p {
+    font-size: 2em;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  .description-text p {
+    font-size: 2.5em;
+  }
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */
+}

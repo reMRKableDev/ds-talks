@@ -39,7 +39,7 @@ const EpisodeDetails = () => {
         </div>
 
         <button type="button" onClick={() => closeEpisodeDetails()}>
-          Close details{' '}
+          Close details
         </button>
       </div>
     </>
