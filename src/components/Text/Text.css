@@ -5,13 +5,47 @@
   align-items: center;
   flex-direction: column;
   text-align: center;
+  padding: 1em;
   margin-bottom: 1.875em;
+  -webkit-animation: fade-animation 5s linear infinite;
+  animation: fade-animation 5s linear infinite;
 }
 
 .text-section h2 {
   font-size: 1.8em;
   text-transform: uppercase;
   margin-bottom: 0.5em;
+}
+
+.text-section p {
+  font-size: 1.125em;
+  color: #fc802d;
+}
+
+@-webkit-keyframes fade-animation {
+  25%,
+  75% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-animation {
+  25%,
+  75% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* iPads (portrait and landscape) ----------- */
