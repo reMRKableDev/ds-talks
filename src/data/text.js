@@ -1,6 +1,6 @@
-const text = {
-  welcomeSloganText: 'Welcome to the tribe of dance lovers!',
-  epicSloganText: 'The most epic dance stories out there!',
+const textData = {
+  welcomeSlogan: 'Welcome to the tribe of dance lovers!',
+  epicSlogan: 'The most epic dance stories out there!',
 };
 
-export default text;
+export default textData;

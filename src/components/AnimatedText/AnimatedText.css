@@ -4,17 +4,16 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: #fff;
   text-align: center;
   padding: 1em;
-  margin-bottom: 1.875em;
-  -webkit-animation: fade-animation 5s linear infinite;
-  animation: fade-animation 5s linear infinite;
 }
 
 .text-section h2 {
   font-size: 1.8em;
   text-transform: uppercase;
-  margin-bottom: 0.5em;
+  -webkit-animation: fade-animation 5s linear infinite;
+  animation: fade-animation 5s linear infinite;
 }
 
 .text-section p {
