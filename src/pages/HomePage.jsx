@@ -1,15 +1,21 @@
 import React from 'react';
 
 import Hero from '../components/Hero/Hero';
-import Text from '../components/Text/Text';
+import AnimatedText from '../components/AnimatedText/AnimatedText';
 import About from '../components/About/About';
+import Footer from '../components/Footer/Footer';
+
+import textData from '../data/text';
+
+const { welcomeSlogan, epicSlogan } = textData;
 
 const HomePage = () => (
   <>
     <Hero />
-    <Text />
+    <AnimatedText slogan={welcomeSlogan} />
     <About />
-    <Text />
+    <AnimatedText slogan={epicSlogan} />
+    <Footer />
   </>
 );
 

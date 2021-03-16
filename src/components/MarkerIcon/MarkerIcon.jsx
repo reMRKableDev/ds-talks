@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Marker, Popup } from 'react-leaflet';
 
-import { PodcastEpisodesContext } from '../../contexts/PodcastEpisodesContext';
+import { PodcastEpisodesContext } from '../../contexts/PodcastEpisodesContext/PodcastEpisodesContext';
 import leafletIcon from '../LeafletIcon/LeafletIcon';
 
 const MarkerIcon = () => {

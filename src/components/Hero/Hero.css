@@ -1,22 +1,25 @@
 .hero-section {
-  margin-bottom: 3em;
+  margin-bottom: 1em;
 }
 
 .hero-container {
   width: 100vw;
+  height: 100vh;
 }
 
 .hero-image {
   width: 100%;
-  background-size: cover;
-  background-position: center center;
+  height: inherit;
+  background-size: auto;
+  background-position: 100px 5px;
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 768px) {
-  /* Styles */
+  .hero-section {
+    height: 100vh;
+  }
 }
 
 /* Desktops and laptops ----------- */

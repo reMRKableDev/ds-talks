@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import { PodcastEpisodesContext } from '../../contexts/PodcastEpisodesContext';
+import { PodcastEpisodesContext } from '../../contexts/PodcastEpisodesContext/PodcastEpisodesContext';
 
 const QuitPlayerButton = () => {
   const { quitAudioPlayer } = useContext(PodcastEpisodesContext);
