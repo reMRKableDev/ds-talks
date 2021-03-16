@@ -8,8 +8,8 @@
   align-items: center;
   background-color: #fff;
   margin: 0 1em;
-  height: 65vh;
   border: 5px solid #000;
+  padding: 0.5em;
 }
 
 .description-image {
@@ -18,8 +18,8 @@
 }
 
 .description-image > figure {
-  width: 150px;
-  height: 150px;
+  width: 50px;
+  height: 50px;
   background-color: #faa72b;
   border: 2px solid #fd2647;
   border-radius: 50%;
@@ -74,7 +74,7 @@
   background-color: #000;
   color: #fff;
   border-radius: 2em;
-  width: 25%;
+  width: 30%;
   padding: 0.625em 1.250em;
   transition: 0.3s;
 }
