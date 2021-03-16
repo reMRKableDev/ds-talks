@@ -12,12 +12,13 @@ export const StyledNav = styled.nav`
 `;
 
 export const StyledThemeButtonContainer = styled.div`
-  padding: 10px;
+  padding: 0.625em;
 `;
 
 export const StyledThemeButton = styled.button`
   background-color: ${buttonBgColor};
   border: 1px solid ${backgroundColor};
+  border-radius: 1em;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   color: ${buttonTextColor};
   cursor: pointer;
