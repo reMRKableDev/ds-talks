@@ -76,6 +76,13 @@
   border-radius: 2em;
   width: 25%;
   padding: 0.625em 1.250em;
+  transition: 0.3s;
+}
+
+.description-text > div > a:hover{
+  border: 2px solid #000;
+  background-color: #fff;
+  color: #000;
 }
 
 /* iPads (portrait and landscape) ----------- */
