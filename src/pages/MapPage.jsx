@@ -5,7 +5,7 @@ import Player from '../components/Player/Player';
 import Header from '../components/Header/Header';
 import EpisodeDetails from '../components/EpisodeDetails/EpisodeDetails';
 
-import { PodcastEpisodesContext } from '../contexts/PodcastEpisodesContext';
+import { PodcastEpisodesContext } from '../contexts/PodcastEpisodesContext/PodcastEpisodesContext';
 
 import helperFunctions from '../helpers';
 
