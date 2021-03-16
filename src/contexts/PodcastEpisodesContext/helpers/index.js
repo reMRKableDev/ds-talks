@@ -1,18 +1,3 @@
-import { css } from 'styled-components';
-import breakpointsData from '../data/breakpoints';
-
-const respondToDeviceWidth = Object.keys(breakpointsData).reduce(
-  (acc, label) => {
-    acc[label] = (...args) => css`
-      @media (min-width: ${breakpointsData[label]}) {
-        ${css(...args)};
-      }
-    `;
-    return acc;
-  },
-  {}
-);
-
 const addCoordinatesToEachEpisodeResult = (
   allEpisodesList,
   guestLocationList
@@ -39,15 +24,7 @@ const removeFalsyValuesFromTheList = (episodeListWithGuestLocation) =>
 const findIncomingEpisodeInEpisodeList = (episodesList, incomingEpisode) =>
   episodesList.find((episodeItem) => episodeItem.id === incomingEpisode.id);
 
-const isEmptyObject = (incomingObj) => Object.keys(incomingObj).length === 0;
-
-const removeAnyHTMLTagsFromString = (incomingStr) =>
-  incomingStr.replace(/(<([^>]+)>)/gi, '');
-
 export default {
-  isEmptyObject,
-  respondToDeviceWidth,
-  removeAnyHTMLTagsFromString,
   removeFalsyValuesFromTheList,
   findIncomingEpisodeInEpisodeList,
   addCoordinatesToEachEpisodeResult,

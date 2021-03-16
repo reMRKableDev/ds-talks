@@ -2,9 +2,7 @@ import React, { useContext } from 'react';
 
 import { PodcastEpisodesContext } from '../../contexts/PodcastEpisodesContext/PodcastEpisodesContext';
 
-import helperFunctions from '../../helpers';
-
-const { removeAnyHTMLTagsFromString } = helperFunctions;
+import removeAnyHTMLTagsFromString from './helpers';
 
 const EpisodeDetails = () => {
   const { episodeDetails, closeEpisodeDetails } = useContext(

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import ApiDataService from '../../services/apiDataService';
 import guestLocationList from '../../data/guestData';
-import helperFunctions from '../../helpers';
+import helperFunctions from './helpers';
 
 const {
   addCoordinatesToEachEpisodeResult,
