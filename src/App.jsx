@@ -7,20 +7,23 @@ import HomePage from './pages/HomePage';
 import MapPage from './pages/MapPage';
 import NotFoundPage from './pages/NotFoundPage';
 
-import { PodcastEpisodesContextProvider } from './contexts/PodcastEpisodesContext';
+import { SiteThemeProvider } from './contexts/ThemeContext/ThemeContext';
+import { PodcastEpisodesContextProvider } from './contexts/PodcastEpisodesContext/PodcastEpisodesContext';
 
 function App() {
   return (
     <>
-      <PodcastEpisodesContextProvider>
-        <Navbar />
+      <SiteThemeProvider>
+        <PodcastEpisodesContextProvider>
+          <Navbar />
 
-        <Router>
-          <HomePage path="/" />
-          <MapPage path="/map" />
-          <NotFoundPage default />
-        </Router>
-      </PodcastEpisodesContextProvider>
+          <Router>
+            <HomePage path="/" />
+            <MapPage path="/map" />
+            <NotFoundPage default />
+          </Router>
+        </PodcastEpisodesContextProvider>
+      </SiteThemeProvider>
     </>
   );
 }
