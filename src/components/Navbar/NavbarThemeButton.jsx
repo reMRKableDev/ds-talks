@@ -1,12 +1,21 @@
 import React from 'react';
-import {StyledThemeButtonContainer, StyledThemeButton} from './NavbarThemeButtonStyles';
+import PropTypes from 'prop-types';
 
-const NavbarThemeButton = () => {
-  return <StyledThemeButtonContainer>
+import { StyledThemeButtonContainer, StyledThemeButton } from './NavbarStyles';
+
+const NavbarThemeButton = ({ theme, handleThemeToggle }) => {
+  return (
+    <StyledThemeButtonContainer>
       <StyledThemeButton onClick={handleThemeToggle}>
-      {theme.mode === "dark" ? "Light Mode 🌕" : "Dark Mode 🌑"}
-    </StyledThemeButton>
-  </StyledThemeButtonContainer>;
+        {theme.mode === 'dark' ? 'Light Mode 🌕' : 'Dark Mode 🌑'}
+      </StyledThemeButton>
+    </StyledThemeButtonContainer>
+  );
 };
 
 export default NavbarThemeButton;
+
+NavbarThemeButton.propTypes = {
+  theme: PropTypes.objectOf(PropTypes.string).isRequired,
+  handleThemeToggle: PropTypes.func.isRequired,
+};

@@ -9,11 +9,7 @@ import HomePage from './pages/HomePage';
 import MapPage from './pages/MapPage';
 import NotFoundPage from './pages/NotFoundPage';
 
-import {
-  useTheme,
-  SiteThemeProvider,
-} from './contexts/ThemeContext/ThemeContext';
-import { PodcastEpisodesContextProvider } from './contexts/PodcastEpisodesContext/PodcastEpisodesContext';
+import { useTheme } from './contexts/ThemeContext/ThemeContext';
 
 function App({ theme }) {
   const toggleTheme = useTheme();
@@ -26,22 +22,18 @@ function App({ theme }) {
 
   return (
     <>
-      <SiteThemeProvider>
-        <PodcastEpisodesContextProvider>
-          <Navbar theme={theme} handleThemeToggle={handleThemeToggle} />
+      <Navbar theme={theme} handleThemeToggle={handleThemeToggle} />
 
-          <Router>
-            <HomePage path="/" />
-            <MapPage path="/map" />
-            <NotFoundPage default />
-          </Router>
-        </PodcastEpisodesContextProvider>
-      </SiteThemeProvider>
+      <Router>
+        <HomePage path="/" />
+        <MapPage path="/map" />
+        <NotFoundPage default />
+      </Router>
     </>
   );
 }
 
 export default withTheme(App);
 App.propTypes = {
-  theme: PropTypes.objectOf(PropTypes.object).isRequired,
+  theme: PropTypes.objectOf(PropTypes.string).isRequired,
 };

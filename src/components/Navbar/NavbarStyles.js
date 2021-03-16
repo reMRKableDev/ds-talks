@@ -3,6 +3,14 @@ import themeStyles from '../../theme/themeStyles';
 
 const { buttonBgColor, backgroundColor, buttonTextColor } = themeStyles;
 
+export const StyledNav = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+`;
+
 export const StyledThemeButtonContainer = styled.div`
   padding: 10px;
 `;

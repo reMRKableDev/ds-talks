@@ -1,16 +1,20 @@
 import React from 'react';
 import { Link } from '@reach/router';
+import PropTypes from 'prop-types';
 import { slide as Menu } from 'react-burger-menu';
 import './Navbar.css';
+
+import { StyledNav, StyledThemeButtonContainer } from './NavbarStyles';
+import NavbarThemeButton from './NavbarThemeButton';
 
 import BurgerIcon from '../../assets/icons/menu.svg';
 import CrossIcon from '../../assets/icons/close.svg';
 
 const renderCustomNavIcon = (icon) => <img src={icon} alt="nav-icon" />;
 
-const Navbar = () => {
+const Navbar = ({ theme, handleThemeToggle }) => {
   return (
-    <nav>
+    <StyledNav>
       <Menu
         customBurgerIcon={renderCustomNavIcon(BurgerIcon)}
         customCrossIcon={renderCustomNavIcon(CrossIcon)}
@@ -23,8 +27,19 @@ const Navbar = () => {
           See Map
         </Link>
       </Menu>
-    </nav>
+      <StyledThemeButtonContainer>
+        <NavbarThemeButton
+          theme={theme}
+          handleThemeToggle={handleThemeToggle}
+        />
+      </StyledThemeButtonContainer>
+    </StyledNav>
   );
 };
 
 export default Navbar;
+
+Navbar.propTypes = {
+  theme: PropTypes.objectOf(PropTypes.string).isRequired,
+  handleThemeToggle: PropTypes.func.isRequired,
+};
