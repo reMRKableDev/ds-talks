@@ -5,7 +5,7 @@ import AnimatedText from '../components/AnimatedText/AnimatedText';
 import About from '../components/About/About';
 import Footer from '../components/Footer/Footer';
 
-import textData from '../data/text';
+import textData from '../data/textData';
 
 const { welcomeSlogan, epicSlogan } = textData;
 

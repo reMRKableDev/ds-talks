@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import respondToDeviceWidth from '../../utils/mediaQueries';
 
 export const StyledHeroSection = styled.section`
   margin-bottom: 1em;
@@ -12,6 +13,10 @@ export const StyledHeroSection = styled.section`
     rgba(252, 128, 45, 1) 75%,
     rgba(250, 167, 43, 1) 100%
   );
+
+  ${respondToDeviceWidth.sm`
+  margin-bottom: 2em;
+`}
 `;
 
 export const StyledFigure = styled.figure`
