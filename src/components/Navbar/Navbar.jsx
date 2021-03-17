@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { slide as Menu } from 'react-burger-menu';
 import './Navbar.css';
 
-import { StyledNav, StyledThemeButtonContainer } from './NavbarStyles';
+import { StyledHeader, StyledThemeButtonContainer } from './NavbarStyles';
 import NavbarThemeButton from './NavbarThemeButton';
 
 import BurgerIcon from '../../assets/icons/menu.svg';
@@ -14,7 +14,7 @@ const renderCustomNavIcon = (icon) => <img src={icon} alt="nav-icon" />;
 
 const Navbar = ({ theme, handleThemeToggle }) => {
   return (
-    <StyledNav>
+    <StyledHeader>
       <Menu
         customBurgerIcon={renderCustomNavIcon(BurgerIcon)}
         customCrossIcon={renderCustomNavIcon(CrossIcon)}
@@ -33,7 +33,7 @@ const Navbar = ({ theme, handleThemeToggle }) => {
           handleThemeToggle={handleThemeToggle}
         />
       </StyledThemeButtonContainer>
-    </StyledNav>
+    </StyledHeader>
   );
 };
 
