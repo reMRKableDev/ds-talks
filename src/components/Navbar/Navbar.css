@@ -4,12 +4,18 @@
   height: 1.9em;
   left: 0.9em;
   top: 1.3em;
-  outline: 0;
+  border: 2px solid orange;
+  filter: invert(99%) sepia(0%) saturate(2%) hue-rotate(267deg) brightness(118%)
+    contrast(100%);
 }
 
 .bm-burger-button:hover {
-  filter: invert(99%) sepia(0%) saturate(2%) hue-rotate(267deg) brightness(118%)
-    contrast(100%);
+  filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(336deg) brightness(88%)
+    contrast(106%);
+}
+
+.bm-burger-button:focus {
+  outline: 0;
 }
 
 .bm-cross-button {
@@ -30,6 +36,11 @@
   background: #fca311;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
+}
+
+.bm-menu a {
+  color: #fff;
+  outline: none;
 }
 
 .bm-morph-shape {

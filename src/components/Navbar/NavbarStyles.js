@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import themeStyles from '../../theme/themeStyles';
 
 const { buttonBgColor, backgroundColor, buttonTextColor } = themeStyles;
