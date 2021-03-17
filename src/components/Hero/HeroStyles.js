@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import respondToDeviceWidth from '../../utils/mediaQueries';
 
 export const StyledHeroSection = styled.section`
-  margin-bottom: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,8 +14,8 @@ export const StyledHeroSection = styled.section`
   );
 
   ${respondToDeviceWidth.sm`
-  margin-bottom: 2em;
-`}
+    margin-bottom: 2em;
+  `}
 `;
 
 export const StyledFigure = styled.figure`

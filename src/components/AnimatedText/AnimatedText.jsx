@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './AnimatedText.css';
+
+import { StyledSection, StyledH2 } from './AnimatedTextStyles';
 
 const AnimatedText = ({ slogan }) => {
   return (
-    <section className="text-section">
-      <h2>{slogan}</h2>
-    </section>
+    <StyledSection className="text-section">
+      <StyledH2>{slogan}</StyledH2>
+    </StyledSection>
   );
 };
 
