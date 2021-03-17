@@ -1,32 +1,46 @@
 import React from 'react';
-import { Link } from '@reach/router';
-import './About.css';
 
+import {
+  StyledAboutSection,
+  StyledDescriptionContainer,
+  StyledDescriptionFigureContainer,
+  StyledDescriptionFigure,
+  StyledDescriptionFigureImage,
+  StyledDescriptionTextContainer,
+  StyledDescriptionParagraph,
+  StyledDescriptionTextHighlight,
+  StyledDescriptionSpan,
+  StyledDescriptionLinkContainer,
+  StyledDescriptionLink,
+} from './AboutStyles';
 import MicrophoneIcon from '../../assets/icons/podcast-mic.svg';
-// import MapBg from '../../assets/images/map.png';
 
 const About = () => {
   return (
-    <section className="description">
-      <div className="row description-section">
-        <div className="column description-image">
-          <figure>
-            <img src={MicrophoneIcon} alt="podcast-mic" />
-          </figure>
-        </div>
-        <div className="double-column description-text">
-          <p>
-            <mark>
-              Dance Specific <span>Talks</span>
-            </mark>{' '}
+    <StyledAboutSection>
+      <StyledDescriptionContainer className="row">
+        <StyledDescriptionFigureContainer className="column">
+          <StyledDescriptionFigure>
+            <StyledDescriptionFigureImage
+              src={MicrophoneIcon}
+              alt="podcast-mic"
+            />
+          </StyledDescriptionFigure>
+        </StyledDescriptionFigureContainer>
+        <StyledDescriptionTextContainer className="double-column">
+          <StyledDescriptionParagraph>
+            <StyledDescriptionTextHighlight>
+              Dance Specific{' '}
+              <StyledDescriptionSpan>Talks</StyledDescriptionSpan>
+            </StyledDescriptionTextHighlight>{' '}
             is a unique podcast, with stories from dancers worldwide.
-          </p>
-          <div>
-            <Link to="/map">See Map</Link>
-          </div>
-        </div>
-      </div>
-    </section>
+          </StyledDescriptionParagraph>
+          <StyledDescriptionLinkContainer>
+            <StyledDescriptionLink to="/map">See Map</StyledDescriptionLink>
+          </StyledDescriptionLinkContainer>
+        </StyledDescriptionTextContainer>
+      </StyledDescriptionContainer>
+    </StyledAboutSection>
   );
 };
 

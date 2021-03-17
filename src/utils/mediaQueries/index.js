@@ -1,5 +1,5 @@
 import { css } from 'styled-components';
-import breakpointsData from '../../data/breakpoints';
+import breakpointsData from '../../data/breakpointsData';
 
 const respondToDeviceWidth = Object.keys(breakpointsData).reduce(
   (acc, label) => {
@@ -13,6 +13,4 @@ const respondToDeviceWidth = Object.keys(breakpointsData).reduce(
   {}
 );
 
-export default {
-  respondToDeviceWidth,
-};
+export default respondToDeviceWidth;

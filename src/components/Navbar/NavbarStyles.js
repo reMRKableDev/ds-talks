@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+
 import themeStyles from '../../theme/themeStyles';
 
 const { buttonBgColor, backgroundColor, buttonTextColor } = themeStyles;
 
-export const StyledNav = styled.nav`
+export const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   position: fixed;
