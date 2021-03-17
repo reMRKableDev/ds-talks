@@ -1,6 +1,6 @@
 const textData = {
-  welcomeSlogan: 'Welcome to the tribe of dance lovers!',
-  epicSlogan: 'The most epic dance stories out there!',
+  welcomeSlogan: 'The tribe of dance lovers!',
+  epicSlogan: 'The most epic dance stories!',
 };
 
 export default textData;
