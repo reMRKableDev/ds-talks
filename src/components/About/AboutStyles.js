@@ -4,6 +4,14 @@ import themeStyles from '../../theme/themeStyles';
 
 import respondToDeviceWidth from '../../utils/mediaQueries';
 
+const smParagraphStyles = respondToDeviceWidth.sm`
+font-size: 2em;
+`;
+
+const lgParagraphStyles = respondToDeviceWidth.lg`
+font-size: 2.5em;
+`;
+
 const {
   backgroundColor,
   brandPrimaryColor,
@@ -55,13 +63,9 @@ export const StyledDescriptionParagraph = styled.p`
   text-transform: capitalize;
   padding: 1em;
 
-  ${respondToDeviceWidth.sm`
-    font-size: 2em;
-  `}
+  ${smParagraphStyles}
 
-  ${respondToDeviceWidth.lg`
-    font-size: 2.5em;
-  `}
+  ${lgParagraphStyles}
 `;
 
 export const StyledDescriptionTextHighlight = styled.mark`
