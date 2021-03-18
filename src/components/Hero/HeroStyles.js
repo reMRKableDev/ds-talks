@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import respondToDeviceWidth from '../../utils/mediaQueries';
 
-const tabletStyles = respondToDeviceWidth.sm`
+const smStyles = respondToDeviceWidth.sm`
 margin-bottom: 2em;
 `;
 
@@ -17,7 +17,7 @@ export const StyledHeroSection = styled.section`
     rgba(250, 167, 43, 1) 100%
   );
 
-  ${tabletStyles}
+  ${smStyles}
 `;
 
 export const StyledFigure = styled.figure`

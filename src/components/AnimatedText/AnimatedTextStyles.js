@@ -4,6 +4,10 @@ import respondToDeviceWidth from '../../utils/mediaQueries';
 
 const { backgroundColor } = themeStyles;
 
+const mdSectionStyles = respondToDeviceWidth.md`
+height: 25vh;
+`;
+
 const flashingText = keyframes`
     25%,
     75% { opacity: 0; }
@@ -21,9 +25,15 @@ export const StyledSection = styled.section`
   text-align: center;
   padding: 1em;
 
-  ${respondToDeviceWidth.md`
-    height: 25vh;
-  `}
+  ${mdSectionStyles}
+`;
+
+const smHeadingStyles = respondToDeviceWidth.sm`
+font-size: 2em;
+`;
+
+const mdHeadingStyles = respondToDeviceWidth.md`
+font-size: 4em;
 `;
 
 export const StyledH2 = styled.h2`
@@ -31,11 +41,7 @@ export const StyledH2 = styled.h2`
   text-transform: uppercase;
   animation: ${flashingText} 5s linear infinite;
 
-  ${respondToDeviceWidth.sm`
-    font-size: 2em;
-  `}
+  ${smHeadingStyles}
 
-  ${respondToDeviceWidth.md`
-    font-size: 4em;
-  `}
+  ${mdHeadingStyles}
 `;
