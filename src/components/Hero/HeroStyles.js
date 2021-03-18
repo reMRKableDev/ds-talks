@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import respondToDeviceWidth from '../../utils/mediaQueries';
 
+const tabletStyles = respondToDeviceWidth.sm`
+margin-bottom: 2em;
+`;
+
 export const StyledHeroSection = styled.section`
   display: flex;
   justify-content: center;
@@ -13,9 +17,7 @@ export const StyledHeroSection = styled.section`
     rgba(250, 167, 43, 1) 100%
   );
 
-  ${respondToDeviceWidth.sm`
-    margin-bottom: 2em;
-  `}
+  ${tabletStyles}
 `;
 
 export const StyledFigure = styled.figure`
