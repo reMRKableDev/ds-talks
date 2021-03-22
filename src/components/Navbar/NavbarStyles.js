@@ -8,7 +8,7 @@ export const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   position: fixed;
-  z-index: 3;
+  z-index: 1000;
   width: 100%;
 `;
 
