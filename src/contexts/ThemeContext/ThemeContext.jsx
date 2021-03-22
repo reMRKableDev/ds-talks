@@ -13,6 +13,7 @@ export const SiteThemeProvider = ({ children }) => {
 
   const toggle = () => {
     const mode = themeState.mode === 'light' ? `dark` : `light`;
+    console.log("object");
     setThemeState({ mode });
   };
 
