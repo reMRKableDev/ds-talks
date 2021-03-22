@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState } from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
-import ThemeWrapper from './ThemeContextStyles';
+import ThemeWrapper from './ThemeWrapper';
 
 const ThemeContext = createContext();
 

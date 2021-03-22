@@ -1,5 +1,5 @@
 const textData = {
-  welcomeSlogan: 'The tribe of dance lovers!',
+  welcomeSlogan: 'A tribe of dance lovers!',
   epicSlogan: 'The most epic dance stories!',
 };
 
