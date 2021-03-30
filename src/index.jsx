@@ -1,11 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { SiteThemeProvider } from './contexts/ThemeContext/ThemeContext';
+import { PodcastEpisodesContextProvider } from './contexts/PodcastEpisodesContext/PodcastEpisodesContext';
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <SiteThemeProvider>
+      <PodcastEpisodesContextProvider>
+        <App />
+      </PodcastEpisodesContextProvider>
+    </SiteThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

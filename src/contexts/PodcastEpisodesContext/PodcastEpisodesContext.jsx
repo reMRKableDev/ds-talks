@@ -1,9 +1,9 @@
 import React, { useState, useEffect, createContext } from 'react';
 import PropTypes from 'prop-types';
 
-import ApiDataService from '../services/apiDataService';
-import guestLocationList from '../data/guestData';
-import helperFunctions from '../helpers';
+import ApiDataService from '../../services/apiDataService';
+import guestLocationList from '../../data/guestData';
+import helperFunctions from './helpers';
 
 const {
   addCoordinatesToEachEpisodeResult,
@@ -15,8 +15,8 @@ export const PodcastEpisodesContext = createContext();
 
 export const PodcastEpisodesContextProvider = ({ children }) => {
   const [episodesList, setEpisodesList] = useState([]);
-  const [selectedEpisode, setSelectedEpisode] = useState({});
   const [episodeDetails, setEpisodeDetails] = useState({});
+  const [selectedEpisode, setSelectedEpisode] = useState({});
   const [audioPlayerVisibility, setAudioPlayerVisibility] = useState(false);
 
   useEffect(async () => {

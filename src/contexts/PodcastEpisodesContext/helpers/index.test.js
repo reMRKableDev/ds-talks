@@ -1,5 +1,5 @@
 import helperFunctions from './index';
-import validators from '../utils/test-validators';
+import validators from '../../../utils/test-validators';
 
 const {
   removeFalsyValuesFromTheList,

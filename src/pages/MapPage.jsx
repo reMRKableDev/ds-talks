@@ -4,11 +4,9 @@ import Map from '../components/Map/Map';
 import Player from '../components/Player/Player';
 import EpisodeDetails from '../components/EpisodeDetails/EpisodeDetails';
 
-import { PodcastEpisodesContext } from '../contexts/PodcastEpisodesContext';
+import { PodcastEpisodesContext } from '../contexts/PodcastEpisodesContext/PodcastEpisodesContext';
 
-import helperFunctions from '../helpers';
-
-const { isEmptyObject } = helperFunctions;
+import isEmptyObject from './helpers';
 
 const MapPage = () => {
   const { episodeDetails, audioPlayerVisibility } = useContext(
