@@ -3,6 +3,8 @@ import './Map.css';
 import { MapContainer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
+import StyledSection from './MapStyles';
+
 import Layer from '../Layer/Layer';
 import MarkerIcon from '../MarkerIcon/MarkerIcon';
 
@@ -13,7 +15,7 @@ const Map = () => {
   const MIN_ZOOM = 2;
 
   return (
-    <section className="main-container">
+    <StyledSection>
       <MapContainer
         center={CENTER}
         zoom={ZOOM_LEVEL}
@@ -25,7 +27,7 @@ const Map = () => {
         <Layer />
         <MarkerIcon />
       </MapContainer>
-    </section>
+    </StyledSection>
   );
 };
 
