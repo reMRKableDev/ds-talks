@@ -13,11 +13,14 @@ const smStyles = respondToDeviceWidth.sm`
 margin-bottom: 2em;
 `;
 
+const lgStyles = respondToDeviceWidth.lg`
+height: 100vh;
+`;
+
 export const StyledHeroSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   background: linear-gradient(
     145deg,
     ${linearGradientColorStart} 0%,
@@ -26,6 +29,8 @@ export const StyledHeroSection = styled.section`
   );
 
   ${smStyles}
+
+  ${lgStyles}
 `;
 
 export const StyledFigure = styled.figure`
