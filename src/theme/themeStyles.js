@@ -49,6 +49,7 @@ const themeStyles = {
   linearGradientColorEnd: theme('mode', linearGradientCombo.end),
   brandPrimaryColor: theme('mode', brandColorCombo('primary')),
   brandSecondaryColor: theme('mode', brandColorCombo('secondary')),
+  heroBannerColor: theme('mode', { light: 'none', dark: 'grayscale(100%)' }),
 };
 
 export default themeStyles;

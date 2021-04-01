@@ -3,6 +3,7 @@ import themeStyles from '../../theme/themeStyles';
 import respondToDeviceWidth from '../../utils/mediaQueries';
 
 const {
+  heroBannerColor,
   linearGradientColorEnd,
   linearGradientColorStart,
   linearGradientColorMiddle,
@@ -33,4 +34,6 @@ export const StyledFigure = styled.figure`
 
 export const StyledImage = styled.img`
   width: 100%;
+  -webkit-filter: ${heroBannerColor};
+  filter: ${heroBannerColor};
 `;
