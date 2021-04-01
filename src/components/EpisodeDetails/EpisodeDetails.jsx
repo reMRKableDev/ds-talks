@@ -2,6 +2,17 @@ import React, { useContext } from 'react';
 
 import { PodcastEpisodesContext } from '../../contexts/PodcastEpisodesContext/PodcastEpisodesContext';
 
+import {
+  StyledDetailsFigure,
+  StyledDetailsSection,
+  StyledDetailsHeading,
+  StyledDetailsContainer,
+  StyledDetailsFigureImage,
+  StyledDetailsDescription,
+  StyledDetailsTextContainer,
+  StyledDetailsFigureContainer,
+} from './EpisodeDetailsStyles';
+
 import removeAnyHTMLTagsFromString from './helpers';
 
 const EpisodeDetails = () => {
@@ -13,33 +24,28 @@ const EpisodeDetails = () => {
 
   return (
     <>
-      <div
-        style={{
-          border: '2px solid #000',
-          padding: '5px',
-        }}
-      >
-        <h1>Guest: {artist}</h1>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-evenly',
-          }}
-        >
-          <figure style={{ width: '500px', height: 'auto' }}>
-            <img
-              style={{ width: '100%' }}
-              src={episodeArtwork}
-              alt="episode-artwork"
-            />
-          </figure>
-          <p>{removeAnyHTMLTagsFromString(description)}</p>
-        </div>
+      <StyledDetailsSection>
+        <StyledDetailsHeading>Guest: {artist}</StyledDetailsHeading>
+        <StyledDetailsContainer className="row">
+          <StyledDetailsFigureContainer className="column">
+            <StyledDetailsFigure>
+              <StyledDetailsFigureImage
+                src={episodeArtwork}
+                alt="episode-artwork"
+              />
+            </StyledDetailsFigure>
+          </StyledDetailsFigureContainer>
+          <StyledDetailsTextContainer className="column">
+            <StyledDetailsDescription>
+              {removeAnyHTMLTagsFromString(description)}
+            </StyledDetailsDescription>
+          </StyledDetailsTextContainer>
+        </StyledDetailsContainer>
 
         <button type="button" onClick={() => closeEpisodeDetails()}>
           Close details
         </button>
-      </div>
+      </StyledDetailsSection>
     </>
   );
 };
