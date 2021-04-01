@@ -47,7 +47,6 @@ export const StyledDescriptionFigure = styled.figure`
   border: 2px solid ${brandSecondaryColor};
   border-radius: 50%;
   padding: 2em;
-  box-shadow: 0 10px 10px -5px #999;
 `;
 
 export const StyledDescriptionFigureImage = styled.img`

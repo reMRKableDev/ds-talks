@@ -1,5 +1,12 @@
 import styled from 'styled-components';
+import themeStyles from '../../theme/themeStyles';
 import respondToDeviceWidth from '../../utils/mediaQueries';
+
+const {
+  linearGradientColorEnd,
+  linearGradientColorStart,
+  linearGradientColorMiddle,
+} = themeStyles;
 
 const smStyles = respondToDeviceWidth.sm`
 margin-bottom: 2em;
@@ -12,9 +19,9 @@ export const StyledHeroSection = styled.section`
   height: 100vh;
   background: linear-gradient(
     145deg,
-    rgba(253, 38, 71, 1) 0%,
-    rgba(252, 128, 45, 1) 75%,
-    rgba(250, 167, 43, 1) 100%
+    ${linearGradientColorStart} 0%,
+    ${linearGradientColorMiddle} 75%,
+    ${linearGradientColorEnd} 100%
   );
 
   ${smStyles}
