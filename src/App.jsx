@@ -4,6 +4,7 @@ import { withTheme } from 'styled-components';
 import PropTypes from 'prop-types';
 
 import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 
 import HomePage from './pages/HomePage';
 import MapPage from './pages/MapPage';
@@ -29,6 +30,8 @@ function App({ theme }) {
         <MapPage path="/map" />
         <NotFoundPage default />
       </Router>
+
+      <Footer />
     </>
   );
 }

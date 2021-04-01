@@ -3,6 +3,7 @@
   width: 100%;
 }
 
-.leaflet-top {
+.leaflet-top,
+.leaflet-bottom {
   z-index: 999;
 }

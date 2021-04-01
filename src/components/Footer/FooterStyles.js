@@ -15,7 +15,7 @@ font-size: 5.5vw;
 margin: 0.8em 0;
 
 span {
-    border: 6px solid ${backgroundColor};
+    border: 6px solid #fff;
 }
 `;
 
@@ -24,7 +24,7 @@ font-size: 5vw;
 margin: 0.6em 0;
 
 span {
-    border: 8px solid ${backgroundColor};
+    border: 8px solid #fff;
 }
 `;
 
@@ -33,7 +33,7 @@ font-size: 4.5vw;
 margin: 0.5em 0;
 
 span {
-    border: 10px solid ${backgroundColor};
+    border: 10px solid #fff;
 }
 `;
 
