@@ -5,5 +5,5 @@
 
 .leaflet-top,
 .leaflet-bottom {
-  z-index: 999;
+  z-index: 999 !important;
 }

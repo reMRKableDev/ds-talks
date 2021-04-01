@@ -10,7 +10,7 @@ import MarkerIcon from '../MarkerIcon/MarkerIcon';
 
 const Map = () => {
   const CENTER = { lat: 52.377956, lng: 4.89707 };
-  const ZOOM_LEVEL = 3;
+  const ZOOM_LEVEL = 2;
   const MAX_ZOOM = 18;
   const MIN_ZOOM = 2;
 
