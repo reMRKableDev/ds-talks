@@ -3,14 +3,12 @@ import React, { useContext } from 'react';
 import { PodcastEpisodesContext } from '../../contexts/PodcastEpisodesContext/PodcastEpisodesContext';
 
 import {
-  StyledDetailsFigure,
   StyledDetailsSection,
   StyledDetailsHeading,
   StyledDetailsContainer,
-  StyledDetailsFigureImage,
+  StyledDescriptionButton,
   StyledDetailsDescription,
   StyledDetailsTextContainer,
-  StyledDetailsFigureContainer,
 } from './EpisodeDetailsStyles';
 
 import removeAnyHTMLTagsFromString from './helpers';
@@ -20,21 +18,13 @@ const EpisodeDetails = () => {
     PodcastEpisodesContext
   );
 
-  const { artist, description, artwork_url: episodeArtwork } = episodeDetails;
+  const { artist, description } = episodeDetails;
 
   return (
     <>
       <StyledDetailsSection>
         <StyledDetailsHeading>Guest: {artist}</StyledDetailsHeading>
         <StyledDetailsContainer className="row">
-          <StyledDetailsFigureContainer className="column">
-            <StyledDetailsFigure>
-              <StyledDetailsFigureImage
-                src={episodeArtwork}
-                alt="episode-artwork"
-              />
-            </StyledDetailsFigure>
-          </StyledDetailsFigureContainer>
           <StyledDetailsTextContainer className="column">
             <StyledDetailsDescription>
               {removeAnyHTMLTagsFromString(description)}
@@ -42,9 +32,12 @@ const EpisodeDetails = () => {
           </StyledDetailsTextContainer>
         </StyledDetailsContainer>
 
-        <button type="button" onClick={() => closeEpisodeDetails()}>
+        <StyledDescriptionButton
+          type="button"
+          onClick={() => closeEpisodeDetails()}
+        >
           Close details
-        </button>
+        </StyledDescriptionButton>
       </StyledDetailsSection>
     </>
   );

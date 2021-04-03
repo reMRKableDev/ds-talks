@@ -1,38 +1,34 @@
 import styled from 'styled-components';
+import themeStyles from '../../theme/themeStyles';
+
+const {
+  backgroundColor,
+  buttonBgColor,
+  buttonBorderColor,
+  buttonTextColor,
+  textColor,
+} = themeStyles;
 
 export const StyledDetailsSection = styled.section`
   padding: 100px;
   border: 3px solid red;
   height: 70vh;
+  text-align: center;
 `;
 
 export const StyledDetailsHeading = styled.h1`
   text-align: center;
   text-decoration: underline;
+  transition: text-decoration 1s;
 `;
 
 export const StyledDetailsContainer = styled.div`
-  border: 3px solid orange;
-`;
-
-export const StyledDetailsFigureContainer = styled.div`
-  border: 3px solid green;
-  align-self: center;
-`;
-
-export const StyledDetailsFigure = styled.figure`
-  width: 25vw;
-  height: auto;
-  align: center;
-`;
-
-export const StyledDetailsFigureImage = styled.img`
-  width: 100%;
+  margin-top: 2em;
+  align-items: center;
 `;
 
 export const StyledDetailsTextContainer = styled.div`
   height: 300px;
-  border: 3px solid green;
   align-self: center;
   overflow-y: scroll;
   padding: 2em;
@@ -40,4 +36,25 @@ export const StyledDetailsTextContainer = styled.div`
 
 export const StyledDetailsDescription = styled.p`
   text-align center;
+  line-height: 1.8em;
+`;
+
+export const StyledDescriptionButton = styled.button`
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid ${buttonBorderColor};
+  background-color: ${buttonBgColor};
+  color: ${buttonTextColor};
+  border-radius: 2em;
+  width: 30%;
+  padding: 0.625em 1.25em;
+  transition: 0.3s;
+  outline: 0;
+  cursor: pointer;
+
+  &:hover {
+    border: 2px solid ${buttonBorderColor};
+    background-color: ${backgroundColor};
+    color: ${textColor};
+  }
 `;
