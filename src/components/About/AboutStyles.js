@@ -101,6 +101,7 @@ export const StyledDescriptionLink = styled(Link)`
   width: 30%;
   padding: 0.625em 1.25em;
   transition: 0.3s;
+  outline: none;
 
   &:hover {
     border: 2px solid ${buttonBorderColor};
