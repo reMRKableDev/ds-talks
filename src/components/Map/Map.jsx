@@ -1,9 +1,9 @@
+/* eslint-disable no-console */
 import React from 'react';
 import './Map.css';
-import { MapContainer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
-import StyledSection from './MapStyles';
+import { StyledSection, StyledMapContainer } from './MapStyles';
 
 import Layer from '../Layer/Layer';
 import MarkerIcon from '../MarkerIcon/MarkerIcon';
@@ -16,17 +16,18 @@ const Map = () => {
 
   return (
     <StyledSection>
-      <MapContainer
+      <StyledMapContainer
         center={CENTER}
         zoom={ZOOM_LEVEL}
         maxZoom={MAX_ZOOM}
         minZoom={MIN_ZOOM}
         scrollWheelZoom={false}
         worldCopyJump
+        fixBounds
       >
         <Layer />
         <MarkerIcon />
-      </MapContainer>
+      </StyledMapContainer>
     </StyledSection>
   );
 };
