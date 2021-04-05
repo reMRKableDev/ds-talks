@@ -2,6 +2,15 @@ import React, { useContext } from 'react';
 
 import { PodcastEpisodesContext } from '../../contexts/PodcastEpisodesContext/PodcastEpisodesContext';
 
+import {
+  StyledDetailsSection,
+  StyledDetailsHeading,
+  StyledDetailsContainer,
+  StyledDescriptionButton,
+  StyledDetailsDescription,
+  StyledDetailsTextContainer,
+} from './EpisodeDetailsStyles';
+
 import removeAnyHTMLTagsFromString from './helpers';
 
 const EpisodeDetails = () => {
@@ -9,37 +18,27 @@ const EpisodeDetails = () => {
     PodcastEpisodesContext
   );
 
-  const { artist, description, artwork_url: episodeArtwork } = episodeDetails;
+  const { artist, description } = episodeDetails;
 
   return (
     <>
-      <div
-        style={{
-          border: '2px solid #000',
-          padding: '5px',
-        }}
-      >
-        <h1>Guest: {artist}</h1>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-evenly',
-          }}
-        >
-          <figure style={{ width: '500px', height: 'auto' }}>
-            <img
-              style={{ width: '100%' }}
-              src={episodeArtwork}
-              alt="episode-artwork"
-            />
-          </figure>
-          <p>{removeAnyHTMLTagsFromString(description)}</p>
-        </div>
+      <StyledDetailsSection>
+        <StyledDetailsHeading>Guest: {artist}</StyledDetailsHeading>
+        <StyledDetailsContainer className="row">
+          <StyledDetailsTextContainer className="column">
+            <StyledDetailsDescription>
+              {removeAnyHTMLTagsFromString(description)}
+            </StyledDetailsDescription>
+          </StyledDetailsTextContainer>
+        </StyledDetailsContainer>
 
-        <button type="button" onClick={() => closeEpisodeDetails()}>
+        <StyledDescriptionButton
+          type="button"
+          onClick={() => closeEpisodeDetails()}
+        >
           Close details
-        </button>
-      </div>
+        </StyledDescriptionButton>
+      </StyledDetailsSection>
     </>
   );
 };

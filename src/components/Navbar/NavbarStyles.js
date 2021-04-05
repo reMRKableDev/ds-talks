@@ -26,4 +26,5 @@ export const StyledThemeButton = styled.button`
   font-size: 0.8em;
   padding: 0.5em 1em;
   outline: none;
+  transition: font-size 1s;
 `;

@@ -4,6 +4,12 @@ import { Marker, Popup } from 'react-leaflet';
 import { PodcastEpisodesContext } from '../../contexts/PodcastEpisodesContext/PodcastEpisodesContext';
 import leafletIcon from '../LeafletIcon/LeafletIcon';
 
+import {
+  StyledPopupButton,
+  StyledPopupText,
+  StyledPopupButtonContainer,
+} from './MarkerIconStyles';
+
 const MarkerIcon = () => {
   const { episodesList, selectEpisode, renderEpisodeDetails } = useContext(
     PodcastEpisodesContext
@@ -19,16 +25,21 @@ const MarkerIcon = () => {
         key={episodeItem.id}
       >
         <Popup>
-          <p>{episodeItem.title}</p>
-          <button type="button" onClick={() => selectEpisode(episodeItem)}>
-            Listen
-          </button>
-          <button
-            type="button"
-            onClick={() => renderEpisodeDetails(episodeItem)}
-          >
-            Episode details
-          </button>
+          <StyledPopupText>{episodeItem.title}</StyledPopupText>
+          <StyledPopupButtonContainer>
+            <StyledPopupButton
+              type="button"
+              onClick={() => selectEpisode(episodeItem)}
+            >
+              Listen
+            </StyledPopupButton>
+            <StyledPopupButton
+              type="button"
+              onClick={() => renderEpisodeDetails(episodeItem)}
+            >
+              Details
+            </StyledPopupButton>
+          </StyledPopupButtonContainer>
         </Popup>
       </Marker>
     ))

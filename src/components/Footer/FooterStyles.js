@@ -2,14 +2,20 @@ import styled from 'styled-components';
 import themeStyles from '../../theme/themeStyles';
 import respondToDeviceWidth from '../../utils/mediaQueries';
 
-const { backgroundColor, textColor } = themeStyles;
+const {
+  textColor,
+  backgroundColor,
+  linearGradientColorEnd,
+  linearGradientColorStart,
+  linearGradientColorMiddle,
+} = themeStyles;
 
 const smStyleHeading = respondToDeviceWidth.sm`
 font-size: 5.5vw;
 margin: 0.8em 0;
 
 span {
-    border: 6px solid ${backgroundColor};
+    border: 6px solid #fff;
 }
 `;
 
@@ -18,7 +24,7 @@ font-size: 5vw;
 margin: 0.6em 0;
 
 span {
-    border: 8px solid ${backgroundColor};
+    border: 8px solid #fff;
 }
 `;
 
@@ -27,7 +33,7 @@ font-size: 4.5vw;
 margin: 0.5em 0;
 
 span {
-    border: 10px solid ${backgroundColor};
+    border: 10px solid #fff;
 }
 `;
 
@@ -37,9 +43,9 @@ export const StyledFooter = styled.footer`
   width: 100%;
   background: linear-gradient(
     145deg,
-    rgba(253, 38, 71, 1) 0%,
-    rgba(252, 128, 45, 1) 75%,
-    rgba(250, 167, 43, 1) 100%
+    ${linearGradientColorStart} 0%,
+    ${linearGradientColorMiddle} 75%,
+    ${linearGradientColorEnd} 100%
   );
   display: flex;
   justify-content: center;
@@ -52,8 +58,8 @@ export const StyledH2 = styled.h2`
   margin: 1em 0;
   text-transform: uppercase;
   span {
-    color: ${backgroundColor};
-    border: 4px solid ${backgroundColor};
+    color: #fff;
+    border: 4px solid ${!backgroundColor};
     box-shadow: 0 0 10px ${!backgroundColor};
     padding: 5px;
     text-transform: none;
@@ -73,8 +79,10 @@ export const StyledFooterPhrase = styled.p`
 
 export const StyledFooterDeveloperTag = styled.p`
   color: ${textColor};
+  margin-bottom: 1em;
+
   a {
-    color: ${backgroundColor};
+    color: #fff;
     text-decoration: none;
     cursor: pointer;
   }

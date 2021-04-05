@@ -1,9 +1,9 @@
 .leaflet-container {
-  border: 3px solid #000;
   height: 70vh;
   width: 100%;
 }
 
-.main-container {
-  padding: 5px;
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 999 !important;
 }

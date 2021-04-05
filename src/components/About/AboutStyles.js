@@ -47,7 +47,6 @@ export const StyledDescriptionFigure = styled.figure`
   border: 2px solid ${brandSecondaryColor};
   border-radius: 50%;
   padding: 2em;
-  box-shadow: 0 10px 10px -5px #999;
 `;
 
 export const StyledDescriptionFigureImage = styled.img`
@@ -102,6 +101,7 @@ export const StyledDescriptionLink = styled(Link)`
   width: 30%;
   padding: 0.625em 1.25em;
   transition: 0.3s;
+  outline: none;
 
   &:hover {
     border: 2px solid ${buttonBorderColor};
