@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import themeStyles from '../../theme/themeStyles';
+import respondToDeviceWidth from '../../utils/mediaQueries';
 
 const {
   backgroundColor,
@@ -9,11 +10,15 @@ const {
   textColor,
 } = themeStyles;
 
+const mdSectionStyles = respondToDeviceWidth.md`
+padding: 100px;
+`;
+
 export const StyledDetailsSection = styled.section`
-  padding: 100px;
-  border: 3px solid red;
-  height: 70vh;
+  padding: 10px;
   text-align: center;
+
+  ${mdSectionStyles}
 `;
 
 export const StyledDetailsHeading = styled.h1`
