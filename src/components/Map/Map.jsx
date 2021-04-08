@@ -9,7 +9,7 @@ import Layer from '../Layer/Layer';
 import MarkerIcon from '../MarkerIcon/MarkerIcon';
 
 const Map = () => {
-  const CENTER = { lat: 52.377956, lng: 4.89707 };
+  const CENTER = { lat: 40.866667, lng: 34.566667 };
   const ZOOM_LEVEL = 2;
   const MAX_ZOOM = 18;
   const MIN_ZOOM = 2;

@@ -6,6 +6,11 @@ const mdSectionStyles = respondToDeviceWidth.md`
 padding: 50px;
 `;
 
+const mdMapContainerStyles = respondToDeviceWidth.md`
+margin-top: 1em;
+height: 100vh;
+`;
+
 export const StyledSection = styled.section`
   padding: 10px;
 
@@ -14,5 +19,7 @@ export const StyledSection = styled.section`
 
 export const StyledMapContainer = styled(MapContainer)`
   margin-top: 5em;
-  height: 80vh;
+  height: 92vh;
+
+  ${mdMapContainerStyles}
 `;

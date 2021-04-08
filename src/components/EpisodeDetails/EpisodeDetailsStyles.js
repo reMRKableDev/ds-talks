@@ -12,6 +12,8 @@ const {
 
 const mdSectionStyles = respondToDeviceWidth.md`
 padding: 100px;
+height: 100vh;
+
 `;
 
 const smButtonStyles = respondToDeviceWidth.sm`
@@ -21,13 +23,13 @@ width: 30%;
 export const StyledDetailsSection = styled.section`
   padding: 10px;
   text-align: center;
-  height: 100vh;
+  background-color: pink;
 
-  ${mdSectionStyles}
+  ${mdSectionStyles};
 `;
 
 export const StyledDetailsHeading = styled.h1`
-  margin-top: 1.5em;
+  margin-top: 2em;
   text-align: center;
   text-decoration: underline;
   transition: text-decoration 1s;
@@ -39,10 +41,9 @@ export const StyledDetailsContainer = styled.div`
 `;
 
 export const StyledDetailsTextContainer = styled.div`
-  height: 300px;
   align-self: center;
   overflow-y: scroll;
-  padding: 2em;
+  padding: 1em;
 `;
 
 export const StyledDetailsDescription = styled.p`

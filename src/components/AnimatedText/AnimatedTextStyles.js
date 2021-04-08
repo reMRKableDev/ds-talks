@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 import themeStyles from '../../theme/themeStyles';
 import respondToDeviceWidth from '../../utils/mediaQueries';
 
@@ -15,6 +15,12 @@ const flashingText = keyframes`
     100% { opacity: 1; }
 `;
 
+const setFinalSectionShadow = (props) =>
+  props.finalSection &&
+  css`
+    box-shadow: 0 8px 6px -6px #555;
+  `;
+
 export const StyledSection = styled.section`
   height: 15vh;
   display: flex;
@@ -24,6 +30,8 @@ export const StyledSection = styled.section`
   background-color: ${backgroundColor};
   text-align: center;
   padding: 1em;
+
+  ${setFinalSectionShadow}
 
   ${mdSectionStyles}
 `;

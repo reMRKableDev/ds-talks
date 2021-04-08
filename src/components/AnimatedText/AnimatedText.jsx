@@ -1,15 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 
-import { StyledSection, StyledH2 } from './AnimatedTextStyles';
+import renderStyledSectionHelper from './helpers';
 
-const AnimatedText = ({ slogan }) => {
-  return (
-    <StyledSection className="text-section">
-      <StyledH2>{slogan}</StyledH2>
-    </StyledSection>
-  );
-};
+const AnimatedText = ({ slogan }) => renderStyledSectionHelper(slogan);
 
 export default AnimatedText;
 
