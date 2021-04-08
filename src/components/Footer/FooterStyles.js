@@ -51,6 +51,7 @@ export const StyledFooter = styled.footer`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: fixed;
 `;
 
 export const StyledH2 = styled.h2`

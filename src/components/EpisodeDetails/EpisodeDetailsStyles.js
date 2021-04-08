@@ -14,14 +14,20 @@ const mdSectionStyles = respondToDeviceWidth.md`
 padding: 100px;
 `;
 
+const smButtonStyles = respondToDeviceWidth.sm`
+width: 30%;
+`;
+
 export const StyledDetailsSection = styled.section`
   padding: 10px;
   text-align: center;
+  height: 100vh;
 
   ${mdSectionStyles}
 `;
 
 export const StyledDetailsHeading = styled.h1`
+  margin-top: 1.5em;
   text-align: center;
   text-decoration: underline;
   transition: text-decoration 1s;
@@ -51,15 +57,18 @@ export const StyledDescriptionButton = styled.button`
   background-color: ${buttonBgColor};
   color: ${buttonTextColor};
   border-radius: 2em;
-  width: 30%;
+  width: 50%;
   padding: 0.625em 1.25em;
   transition: 0.3s;
   outline: 0;
   cursor: pointer;
+  margin: 1em 0 3em 0;
 
   &:hover {
     border: 2px solid ${buttonBorderColor};
     background-color: ${backgroundColor};
     color: ${textColor};
   }
+
+  ${smButtonStyles}
 `;
