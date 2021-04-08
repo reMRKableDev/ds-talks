@@ -15,7 +15,7 @@ height: 100vh;
 `;
 
 const smButtonStyles = respondToDeviceWidth.sm`
-width: 30%;
+width: auto;
 `;
 
 export const StyledDetailsSection = styled.section`
