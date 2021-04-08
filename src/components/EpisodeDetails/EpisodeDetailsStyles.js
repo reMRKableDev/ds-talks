@@ -10,10 +10,8 @@ const {
   textColor,
 } = themeStyles;
 
-const mdSectionStyles = respondToDeviceWidth.md`
-padding: 100px;
+const smSectionStyles = respondToDeviceWidth.sm`
 height: 100vh;
-
 `;
 
 const smButtonStyles = respondToDeviceWidth.sm`
@@ -21,32 +19,45 @@ width: 30%;
 `;
 
 export const StyledDetailsSection = styled.section`
-  padding: 10px;
+  padding: 1.5em;
   text-align: center;
-  background-color: pink;
+  background-color: ${backgroundColor};
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 100%;
 
-  ${mdSectionStyles};
+  ${smSectionStyles};
 `;
 
 export const StyledDetailsHeading = styled.h1`
-  margin-top: 2em;
+  padding-top: 1.5em;
   text-align: center;
   text-decoration: underline;
   transition: text-decoration 1s;
 `;
 
 export const StyledDetailsContainer = styled.div`
-  margin-top: 2em;
+  margin-top: 1.25em;
   align-items: center;
 `;
 
-export const StyledDetailsTextContainer = styled.div`
-  align-self: center;
-  overflow-y: scroll;
-  padding: 1em;
+const smTextContainerStyles = respondToDeviceWidth.sm`
+width: 100%;
 `;
 
-export const StyledDetailsDescription = styled.p`
+export const StyledDetailsTextContainer = styled.div`
+  height: auto;
+  width: 320px;
+  align-self: center;
+  overflow-y: scroll;
+  overflow-x: scroll;
+
+  ${smTextContainerStyles}
+`;
+
+export const StyledDetailsText = styled.p`
   text-align center;
   line-height: 1.8em;
 `;

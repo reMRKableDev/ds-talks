@@ -3,7 +3,8 @@ import { MapContainer } from 'react-leaflet';
 import respondToDeviceWidth from '../../utils/mediaQueries';
 
 const mdSectionStyles = respondToDeviceWidth.md`
-padding: 50px;
+padding: 100px;
+
 `;
 
 const mdMapContainerStyles = respondToDeviceWidth.md`
@@ -12,14 +13,15 @@ height: 100vh;
 `;
 
 export const StyledSection = styled.section`
-  padding: 10px;
+  padding: 15px;
 
-  ${mdSectionStyles}
+  ${mdSectionStyles};
 `;
 
 export const StyledMapContainer = styled(MapContainer)`
   margin-top: 5em;
+  border: 2px solid #000;
   height: 92vh;
 
-  ${mdMapContainerStyles}
+  ${mdMapContainerStyles};
 `;
