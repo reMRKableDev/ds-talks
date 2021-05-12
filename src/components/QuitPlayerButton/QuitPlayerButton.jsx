@@ -1,7 +1,5 @@
 import React, { useContext } from 'react';
-
 import { PodcastEpisodesContext } from '../../contexts/PodcastEpisodesContext/PodcastEpisodesContext';
-
 import StyledQuitPlayerButton from './QuitPlayerButton';
 
 const QuitPlayerButton = () => {
@@ -9,7 +7,7 @@ const QuitPlayerButton = () => {
 
   return (
     <StyledQuitPlayerButton type="button" onClick={() => quitAudioPlayer()}>
-      Quit Player
+      <span>Hello</span>
     </StyledQuitPlayerButton>
   );
 };

@@ -6,7 +6,6 @@ const {
   backgroundColor,
   buttonBorderColor,
   buttonBgColor,
-  buttonTextColor,
 } = themeStyles;
 
 const StyledQuitPlayerButton = styled.button`
@@ -14,7 +13,7 @@ const StyledQuitPlayerButton = styled.button`
   text-decoration: none;
   border: 2px solid ${buttonBorderColor};
   background-color: ${buttonBgColor};
-  color: ${buttonTextColor};
+  color: orange;
   border-radius: 2em;
   padding: 0.625em 1.25em;
   transition: 0.3s;
@@ -23,6 +22,7 @@ const StyledQuitPlayerButton = styled.button`
   margin: 1em 0 3em 0;
   align-self: center;
   width: 30%;
+  font-size: 1.5em;
 
   &:hover {
     border: 2px solid ${buttonBorderColor};
