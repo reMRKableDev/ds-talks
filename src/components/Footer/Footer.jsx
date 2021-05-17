@@ -7,8 +7,7 @@ import {
   StyledFooterDeveloperTag,
 } from './FooterStyles';
 
-const Footer = () => {
-  return (
+const Footer = () => (
     <StyledFooter data-testid="app-footer">
       <StyledH2>
         <span>Thank You</span>
@@ -20,6 +19,5 @@ const Footer = () => {
       </StyledFooterDeveloperTag>
     </StyledFooter>
   );
-};
 
 export default Footer;

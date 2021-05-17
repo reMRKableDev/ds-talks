@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router } from '@reach/router';
+import { Switch, Route } from 'react-router-dom';
 import { withTheme } from 'styled-components';
 import PropTypes from 'prop-types';
 
@@ -25,11 +25,11 @@ function App({ theme }) {
     <>
       <Navbar theme={theme} handleThemeToggle={handleThemeToggle} />
 
-      <Router>
-        <HomePage path="/" />
-        <MapPage path="/map" />
-        <NotFoundPage default />
-      </Router>
+      <Switch>
+        <Route exact path="/map" component={MapPage} />
+        <Route exact path="/" component={HomePage} />
+        <Route component={NotFoundPage} />
+      </Switch>
 
       <Footer />
     </>

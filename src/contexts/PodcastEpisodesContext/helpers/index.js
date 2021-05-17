@@ -1,8 +1,7 @@
 const addCoordinatesToEachEpisodeResult = (
   allEpisodesList,
   guestLocationList
-) => {
-  return allEpisodesList.map((episodeItem) => {
+) => allEpisodesList.map((episodeItem) => {
     let episodeItemWithGuestLocation;
 
     guestLocationList.forEach((guestItem) => {
@@ -16,7 +15,6 @@ const addCoordinatesToEachEpisodeResult = (
 
     return episodeItemWithGuestLocation;
   });
-};
 
 const removeFalsyValuesFromTheList = (episodeListWithGuestLocation) =>
   episodeListWithGuestLocation.filter((element) => element != null);

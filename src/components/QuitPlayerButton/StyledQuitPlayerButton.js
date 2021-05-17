@@ -1,12 +1,7 @@
 import styled from 'styled-components';
 import themeStyles from '../../theme/themeStyles';
 
-const {
-  textColor,
-  backgroundColor,
-  buttonBorderColor,
-  buttonBgColor,
-} = themeStyles;
+const { textColor, backgroundColor, buttonBorderColor, buttonBgColor } = themeStyles;
 
 const StyledQuitPlayerButton = styled.button`
   text-transform: uppercase;

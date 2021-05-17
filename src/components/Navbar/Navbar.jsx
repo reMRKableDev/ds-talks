@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from '@reach/router';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { slide as Menu } from 'react-burger-menu';
 import './Navbar.css';
@@ -12,8 +12,7 @@ import CrossIcon from '../../assets/icons/close.svg';
 
 const renderCustomNavIcon = (icon) => <img src={icon} alt="nav-icon" />;
 
-const Navbar = ({ theme, handleThemeToggle }) => {
-  return (
+const Navbar = ({ theme, handleThemeToggle }) => (
     <StyledHeader>
       <Menu
         customBurgerIcon={renderCustomNavIcon(BurgerIcon)}
@@ -35,7 +34,6 @@ const Navbar = ({ theme, handleThemeToggle }) => {
       </StyledThemeButtonContainer>
     </StyledHeader>
   );
-};
 
 export default Navbar;
 

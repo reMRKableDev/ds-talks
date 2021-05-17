@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
@@ -9,11 +11,13 @@ import { PodcastEpisodesContextProvider } from './contexts/PodcastEpisodesContex
 
 ReactDOM.render(
   <React.StrictMode>
-    <SiteThemeProvider>
-      <PodcastEpisodesContextProvider>
-        <App />
-      </PodcastEpisodesContextProvider>
-    </SiteThemeProvider>
+    <Router>
+      <SiteThemeProvider>
+        <PodcastEpisodesContextProvider>
+          <App />
+        </PodcastEpisodesContextProvider>
+      </SiteThemeProvider>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

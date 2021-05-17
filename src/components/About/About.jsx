@@ -15,8 +15,7 @@ import {
 } from './AboutStyles';
 import MicrophoneIcon from '../../assets/icons/podcast-mic.svg';
 
-const About = () => {
-  return (
+const About = () => (
     <StyledAboutSection>
       <StyledDescriptionContainer className="row">
         <StyledDescriptionFigureContainer className="column">
@@ -42,6 +41,5 @@ const About = () => {
       </StyledDescriptionContainer>
     </StyledAboutSection>
   );
-};
 
 export default About;
