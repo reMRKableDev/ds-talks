@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import AudioPlayer from 'react-h5-audio-player';
-// import themeStyles from '../../theme/themeStyles';
 
 const StyledAudioPlayer = styled(AudioPlayer)`
   background-color: pink;
