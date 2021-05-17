@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from '@reach/router';
+import { Link } from 'react-router-dom';
 import themeStyles from '../../theme/themeStyles';
 
 import respondToDeviceWidth from '../../utils/mediaQueries';

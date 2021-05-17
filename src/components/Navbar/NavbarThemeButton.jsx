@@ -3,15 +3,13 @@ import PropTypes from 'prop-types';
 
 import { StyledThemeButtonContainer, StyledThemeButton } from './NavbarStyles';
 
-const NavbarThemeButton = ({ theme, handleThemeToggle }) => {
-  return (
+const NavbarThemeButton = ({ theme, handleThemeToggle }) => (
     <StyledThemeButtonContainer>
       <StyledThemeButton onClick={handleThemeToggle}>
         {theme.mode === 'dark' ? 'Light Mode 🌕' : 'Dark Mode 🌑'}
       </StyledThemeButton>
     </StyledThemeButtonContainer>
   );
-};
 
 export default NavbarThemeButton;
 

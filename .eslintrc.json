@@ -1,13 +1,13 @@
 {
   "env": {
     "browser": true,
-    "jest/globals": true
+    "es6": true
   },
   "extends": [
     "airbnb",
     "plugin:react/recommended",
-    "plugin:prettier/recommended",
-    "plugin:jest/recommended"
+    "plugin:jest/recommended",
+    "prettier"
   ],
   "parser": "babel-eslint",
   "parserOptions": {
