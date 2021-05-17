@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
-import AudioPlayer from 'react-h5-audio-player';
-import 'react-h5-audio-player/lib/styles.css';
 
 import { PodcastEpisodesContext } from '../../contexts/PodcastEpisodesContext/PodcastEpisodesContext';
 
+import StyledAudioPlayer from './StyledAudioPlayer';
 import QuitPlayerButton from '../QuitPlayerButton/QuitPlayerButton';
 
 const Player = () => {
@@ -11,11 +10,11 @@ const Player = () => {
   const { audio_url: url, episode_number: number, artist } = selectedEpisode;
 
   return (
-    <AudioPlayer
+    <StyledAudioPlayer
       autoPlay
       loop
       src={url}
-      layout="horizontal"
+      layout="stacked"
       customAdditionalControls={[]}
       header={number && artist ? `Episode #${number} with ${artist}` : null}
       footer={<QuitPlayerButton />}

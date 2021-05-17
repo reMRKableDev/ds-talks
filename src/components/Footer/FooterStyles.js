@@ -38,8 +38,6 @@ span {
 `;
 
 export const StyledFooter = styled.footer`
-  bottom: 0;
-  left: 0;
   width: 100%;
   background: linear-gradient(
     145deg,
@@ -51,6 +49,11 @@ export const StyledFooter = styled.footer`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 300px;
+  z-index: -1;
 `;
 
 export const StyledH2 = styled.h2`

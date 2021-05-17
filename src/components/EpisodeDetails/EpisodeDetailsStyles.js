@@ -10,36 +10,54 @@ const {
   textColor,
 } = themeStyles;
 
-const mdSectionStyles = respondToDeviceWidth.md`
-padding: 100px;
+const smSectionStyles = respondToDeviceWidth.sm`
+height: 100vh;
+`;
+
+const smButtonStyles = respondToDeviceWidth.sm`
+width: auto;
 `;
 
 export const StyledDetailsSection = styled.section`
-  padding: 10px;
+  padding: 1.5em;
   text-align: center;
+  background-color: ${backgroundColor};
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 100%;
 
-  ${mdSectionStyles}
+  ${smSectionStyles};
 `;
 
 export const StyledDetailsHeading = styled.h1`
+  padding-top: 1.5em;
   text-align: center;
   text-decoration: underline;
   transition: text-decoration 1s;
 `;
 
 export const StyledDetailsContainer = styled.div`
-  margin-top: 2em;
+  margin-top: 1.25em;
   align-items: center;
 `;
 
-export const StyledDetailsTextContainer = styled.div`
-  height: 300px;
-  align-self: center;
-  overflow-y: scroll;
-  padding: 2em;
+const smTextContainerStyles = respondToDeviceWidth.sm`
+width: 100%;
 `;
 
-export const StyledDetailsDescription = styled.p`
+export const StyledDetailsTextContainer = styled.div`
+  height: auto;
+  width: 320px;
+  align-self: center;
+  overflow-y: scroll;
+  overflow-x: scroll;
+
+  ${smTextContainerStyles}
+`;
+
+export const StyledDetailsText = styled.p`
   text-align center;
   line-height: 1.8em;
 `;
@@ -51,15 +69,18 @@ export const StyledDescriptionButton = styled.button`
   background-color: ${buttonBgColor};
   color: ${buttonTextColor};
   border-radius: 2em;
-  width: 30%;
+  width: 50%;
   padding: 0.625em 1.25em;
   transition: 0.3s;
   outline: 0;
   cursor: pointer;
+  margin: 1em 0 3em 0;
 
   &:hover {
     border: 2px solid ${buttonBorderColor};
     background-color: ${backgroundColor};
     color: ${textColor};
   }
+
+  ${smButtonStyles}
 `;

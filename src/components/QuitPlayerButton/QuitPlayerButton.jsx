@@ -2,13 +2,15 @@ import React, { useContext } from 'react';
 
 import { PodcastEpisodesContext } from '../../contexts/PodcastEpisodesContext/PodcastEpisodesContext';
 
+import StyledQuitPlayerButton from './StyledQuitPlayerButton';
+
 const QuitPlayerButton = () => {
   const { quitAudioPlayer } = useContext(PodcastEpisodesContext);
 
   return (
-    <button type="button" onClick={() => quitAudioPlayer()}>
-      Quit Player
-    </button>
+    <StyledQuitPlayerButton type="button" onClick={() => quitAudioPlayer()}>
+      <span>Hello</span>
+    </StyledQuitPlayerButton>
   );
 };
 

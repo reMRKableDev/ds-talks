@@ -32,7 +32,7 @@ export const StyledPopupButtonContainer = styled.div`
 export const StyledPopupButton = styled.button`
   text-transform: uppercase;
   text-decoration: none;
-  border: 2px solid ${buttonBorderColor};
+  border: 2px solid ${!buttonBorderColor};
   background-color: ${buttonBgColor};
   color: ${buttonTextColor};
   border-radius: 2em;

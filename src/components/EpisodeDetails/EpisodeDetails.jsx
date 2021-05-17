@@ -3,11 +3,11 @@ import React, { useContext } from 'react';
 import { PodcastEpisodesContext } from '../../contexts/PodcastEpisodesContext/PodcastEpisodesContext';
 
 import {
+  StyledDetailsText,
   StyledDetailsSection,
   StyledDetailsHeading,
   StyledDetailsContainer,
   StyledDescriptionButton,
-  StyledDetailsDescription,
   StyledDetailsTextContainer,
 } from './EpisodeDetailsStyles';
 
@@ -26,9 +26,9 @@ const EpisodeDetails = () => {
         <StyledDetailsHeading>Guest: {artist}</StyledDetailsHeading>
         <StyledDetailsContainer className="row">
           <StyledDetailsTextContainer className="column">
-            <StyledDetailsDescription>
+            <StyledDetailsText>
               {removeAnyHTMLTagsFromString(description)}
-            </StyledDetailsDescription>
+            </StyledDetailsText>
           </StyledDetailsTextContainer>
         </StyledDetailsContainer>
 
