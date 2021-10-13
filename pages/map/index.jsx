@@ -9,10 +9,3 @@ export const getStaticProps = async () => {
     props: 1,
   };
 };
-
-export const getStaticPaths = async () => {
-  return {
-    paths: { params: ['/map'] },
-    fallback: false,
-  };
-};
