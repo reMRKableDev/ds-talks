@@ -6,6 +6,6 @@ export default Map;
 
 export const getStaticProps = async () => {
   return {
-    props: 1,
+    props: { data: 1 },
   };
 };
