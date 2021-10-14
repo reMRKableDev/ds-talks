@@ -5,15 +5,25 @@ module.exports = {
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '976px',
+        xl: '1440px',
+      },
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
-        orange: {
+
+        black: '#000',
+        white: '#fff',
+
+        brandOrange: {
           light: '#fc954f',
           DEFAULT: '#fc802d',
           dark: '#e25d03',
         },
-        red: {
+        brandRed: {
           light: '#fd4e69',
           DEFAULT: '#fd2647',
           dark: '#e30225',
