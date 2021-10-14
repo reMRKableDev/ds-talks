@@ -1,6 +1,6 @@
 import NextLink from '../shared/nextLink';
 
-const Header = () => {
+const Header = ({ showMobileMenu, setShowMobileMenu }) => {
   return (
     <nav>
       <NextLink linkTo="/" value="Home" />
