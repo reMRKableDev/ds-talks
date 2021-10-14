@@ -1,15 +1,18 @@
 import { useState } from 'react';
-import Header from './Header';
+import Navbar from './navbar';
 
 const Layout = ({ children }) => {
-  const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+
+  const handleToggleMenu = () => setShowMenu(!showMenu);
 
   return (
     <div>
-      <Header
-        showMobileMenu={showMobileMenu}
-        setShowMobileMenu={setShowMobileMenu}
-      />
+      <header>
+        Logo Goes
+        <button onClick={handleToggleMenu}>Opening</button>
+      </header>
+      <Navbar handleToggleMenu={handleToggleMenu} />
       <main>{children}</main>
       <footer>I am footer</footer>
     </div>
