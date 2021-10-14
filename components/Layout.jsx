@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import Header from './header';
 import Navbar from './navbar';
+import Footer from './footer';
 
 const Layout = ({ children }) => {
   const [showMenu, setShowMenu] = useState(false);
@@ -8,13 +10,10 @@ const Layout = ({ children }) => {
 
   return (
     <div>
-      <header>
-        Logo Goes
-        <button onClick={handleToggleMenu}>Opening</button>
-      </header>
+      <Header />
       <Navbar handleToggleMenu={handleToggleMenu} />
       <main>{children}</main>
-      <footer>I am footer</footer>
+      <Footer />
     </div>
   );
 };
