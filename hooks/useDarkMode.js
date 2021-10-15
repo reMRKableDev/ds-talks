@@ -3,8 +3,8 @@ import { DARK, LIGHT } from '../lib/constants';
 
 export default function useDarkMode() {
   const [dark, setDark] = useState(false);
-  console.log('🚀 ~ file: useDarkMode.js ~ line 6 ~ useDarkMode ~ dark', dark);
 
+  // TODO: Fix the dark mode rendering
   useEffect(() => {
     const rootElement = window.document.documentElement;
 
@@ -13,7 +13,6 @@ export default function useDarkMode() {
       setDark(localStorage.isDarkMode);
       rootElement.classList.add(DARK);
       return; */
-      console.log('here 2');
       rootElement.classList.add(DARK);
       localStorage.setItem('isDarkMode', dark);
 
@@ -26,7 +25,6 @@ export default function useDarkMode() {
         localStorage.removeItem('isDarkMode');
       } */
     } else {
-      console.log('here 3');
       rootElement.classList.remove(DARK);
       localStorage.removeItem('isDarkMode');
     }
