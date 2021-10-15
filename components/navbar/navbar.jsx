@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { XIcon } from '@heroicons/react/outline';
-import NextLink from '../shared/nextLink';
+import SiteLink from '../shared/SiteLink';
 
 const Navbar = ({ handleToggleMenu }) => {
   return (
@@ -9,8 +9,8 @@ const Navbar = ({ handleToggleMenu }) => {
       <nav>
         <button onClick={handleToggleMenu}>Close</button>
         <div>
-          <NextLink linkTo="/" value="Home" />
-          <NextLink linkTo="/map" value="Map" />
+          <SiteLink linkTo="/" value="Home" />
+          <SiteLink linkTo="/map" value="Map" />
         </div>
 
         <div>

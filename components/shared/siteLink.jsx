@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const NextLink = ({ linkTo, value }) => {
+const SiteLink = ({ linkTo, value }) => {
   return (
     <Link href={linkTo}>
       <a>{value}</a>
@@ -8,4 +8,4 @@ const NextLink = ({ linkTo, value }) => {
   );
 };
 
-export default NextLink;
+export default SiteLink;
