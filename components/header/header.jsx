@@ -13,19 +13,20 @@ const Header = ({ handleToggleMenu }) => {
         Menu
       </button>
       <p className="uppercase">Dance Specific Talks</p>
-      <button>Toggle</button>
-
       <Switch
         checked={enabled}
         onChange={setEnabled}
-        className={`${enabled ? 'bg-black' : 'bg-black'}
-          relative inline-flex flex-shrink-0 h-[38px] w-[74px] border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
+        className={`${
+          enabled ? 'bg-white' : 'bg-black'
+        } relative inline-flex flex-shrink-0 items-center h-6 w-12 rounded-full cursor-pointer border-2 border-transparent focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 transition-colors ease-in-out duration-200`}
       >
-        <span className="sr-only">Use setting</span>
+        <span>Hello</span>
+        <span className="sr-only">Toggle Theme</span>
         <span
           aria-hidden="true"
-          className={`${enabled ? 'translate-x-9' : 'translate-x-0'}
-            pointer-events-none inline-block h-[34px] w-[34px] rounded-full bg-white shadow-lg transform ring-0 transition ease-in-out duration-200`}
+          className={`${
+            enabled ? 'translate-x-6' : 'translate-x-1'
+          } inline-block w-5 h-5 transform bg-brandRed rounded-full shadow-lg transform ring-0 transition ease-in-out duration-200`}
         />
       </Switch>
     </header>
