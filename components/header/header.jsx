@@ -8,7 +8,7 @@ import {
   switchContainer,
   switchToggleWrapper,
 } from './headerStyles';
-import { BRAND_NAME, BG, TRANSLATE } from '../../lib/constants';
+import { BRAND_NAME, BG, TRANSLATE, MENU_ICON } from '../../lib/constants';
 
 const Header = ({ handleToggleMenu }) => {
   const [enabled, setEnabled] = useDarkMode();
@@ -18,7 +18,7 @@ const Header = ({ handleToggleMenu }) => {
   return (
     <header className={headerWrapper}>
       <button type="button" className={headerItems} onClick={handleToggleMenu}>
-        Menu
+        <SiteIcon name={MENU_ICON} />
       </button>
       <p className={headerItems}>{BRAND_NAME}</p>
       <Switch

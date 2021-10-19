@@ -7,11 +7,14 @@ import { mainWrapper, layoutContainer } from './layoutStyles';
 const Layout = ({ children }) => {
   const [showMenu, setShowMenu] = useState(false);
 
-  const handleToggleMenu = () => setShowMenu(!showMenu);
+  const handleToggleMenu = () => {
+    console.log('here');
+    setShowMenu(!showMenu);
+  };
 
   return (
     <div className={layoutContainer}>
-      <Header />
+      <Header handleToggleMenu={handleToggleMenu} />
       <Navbar handleToggleMenu={handleToggleMenu} />
       <main className={mainWrapper}>{children}</main>
       <Footer />
