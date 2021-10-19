@@ -1,11 +1,15 @@
 import '../styles/globals.css';
+import Script from 'next/script';
 import Layout from '../components/layout';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <Script strategy="beforeInteractive" src="/scripts/darkMode.js" />
+      <Layout>
+        <Component pageProps={pageProps} />
+      </Layout>
+    </>
   );
 }
 

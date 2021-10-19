@@ -1,45 +1,24 @@
 import { useEffect, useState } from 'react';
-import { DARK, LIGHT } from '../lib/constants';
+import { DARK } from '../lib/constants';
 
 export default function useDarkMode() {
-  const [dark, setDark] = useState(false);
+  const [enabled, setEnabled] = useState(undefined);
 
-  // TODO: Fix the dark mode rendering
   useEffect(() => {
-    const rootElement = window.document.documentElement;
+    setEnabled(document.documentElement.classList.contains(DARK));
+  }, []);
 
-    if (dark || localStorage.isDarkMode) {
-      /* console.log('here 3');
-      setDark(localStorage.isDarkMode);
-      rootElement.classList.add(DARK);
-      return; */
-      rootElement.classList.add(DARK);
-      localStorage.setItem('isDarkMode', dark);
+  useEffect(() => {
+    const rootElement = window.document.documentElement.classList;
 
-      /* if (dark) {
-        rootElement.classList.add(DARK);
-        localStorage.setItem('isDarkMode', dark);
-      } else {
-        console.log('here');
-        rootElement.classList.remove(DARK);
-        localStorage.removeItem('isDarkMode');
-      } */
+    if (enabled) {
+      rootElement.add(DARK);
+      localStorage.setItem('isDarkMode', 'true');
     } else {
-      rootElement.classList.remove(DARK);
-      localStorage.removeItem('isDarkMode');
+      rootElement.remove(DARK);
+      localStorage.setItem('isDarkMode', 'false');
     }
-    /* if (!localStorage.theme) {
-      localStorage.setItem('theme', LIGHT);
-      setDark(localStorage.theme);
-    } else {
-      console.log('post refresh', localStorage.theme);
-      rootElement.classList.remove(localStorage.theme);
-      rootElement.classList.add(localStorage.theme);
-      // localStorage.setItem('theme', theme);
+  }, [enabled]);
 
-      // setTheme(localStorage.theme);
-    } */
-  }, [dark]);
-
-  return [dark, setDark];
+  return [enabled, setEnabled];
 }
