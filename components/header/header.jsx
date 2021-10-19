@@ -3,6 +3,7 @@ import { Switch } from '@headlessui/react';
 import SiteIcon from '../shared/siteIcon';
 import useDarkMode from '../../hooks/useDarkMode';
 import {
+  isEnabled,
   headerItems,
   headerWrapper,
   switchContainer,
@@ -23,15 +24,21 @@ const Header = ({ handleToggleMenu }) => {
       <Switch
         checked={enabled}
         onChange={setEnabled}
-        className={`${enabled ? 'bg-black' : 'bg-white'} ${switchContainer}`}
+        className={`${isEnabled(
+          enabled,
+          'bg-black',
+          'bg-white'
+        )} ${switchContainer}`}
       >
         <span
           aria-hidden="true"
-          className={`${
-            enabled ? 'translate-x-6' : 'translate-x-1'
-          } ${switchToggleWrapper}`}
+          className={`${isEnabled(
+            enabled,
+            'translate-x-6',
+            'translate-x-1'
+          )} ${switchToggleWrapper}`}
         >
-          {<SiteIcon name={enabled ? MOON_ICON : SUN_ICON} />}
+          {<SiteIcon name={isEnabled(enabled, MOON_ICON, SUN_ICON)} />}
         </span>
       </Switch>
     </header>
