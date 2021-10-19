@@ -17,7 +17,7 @@ const Header = ({ handleToggleMenu }) => {
 
   return (
     <header className={headerWrapper}>
-      <button className={headerItems} onClick={handleToggleMenu}>
+      <button type="button" className={headerItems} onClick={handleToggleMenu}>
         Menu
       </button>
       <p className={headerItems}>{BRAND_NAME}</p>
@@ -30,7 +30,7 @@ const Header = ({ handleToggleMenu }) => {
           aria-hidden="true"
           className={`${isEnabled(enabled, TRANSLATE)} ${switchToggleWrapper}`}
         >
-          {<SiteIcon name={isEnabled(enabled)} />}
+          <SiteIcon name={isEnabled(enabled)} />
         </span>
       </Switch>
     </header>
