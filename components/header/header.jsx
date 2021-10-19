@@ -9,7 +9,7 @@ import {
   switchContainer,
   switchToggleWrapper,
 } from './headerStyles';
-import { BRAND_NAME, SUN_ICON, MOON_ICON } from '../../lib/constants';
+import { BRAND_NAME, BG, TRANSLATE } from '../../lib/constants';
 
 const Header = ({ handleToggleMenu }) => {
   const [enabled, setEnabled] = useState(false);
@@ -24,21 +24,13 @@ const Header = ({ handleToggleMenu }) => {
       <Switch
         checked={enabled}
         onChange={setEnabled}
-        className={`${isEnabled(
-          enabled,
-          'bg-black',
-          'bg-white'
-        )} ${switchContainer}`}
+        className={`${isEnabled(enabled, BG)} ${switchContainer}`}
       >
         <span
           aria-hidden="true"
-          className={`${isEnabled(
-            enabled,
-            'translate-x-6',
-            'translate-x-1'
-          )} ${switchToggleWrapper}`}
+          className={`${isEnabled(enabled, TRANSLATE)} ${switchToggleWrapper}`}
         >
-          {<SiteIcon name={isEnabled(enabled, MOON_ICON, SUN_ICON)} />}
+          {<SiteIcon name={isEnabled(enabled)} />}
         </span>
       </Switch>
     </header>
