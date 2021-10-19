@@ -2,7 +2,12 @@ import { useState } from 'react';
 import { Switch } from '@headlessui/react';
 import SiteIcon from '../shared/siteIcon';
 import useDarkMode from '../../hooks/useDarkMode';
-import { switchContainer, switchToggleWrapper } from './headerStyles';
+import {
+  headerItems,
+  headerWrapper,
+  switchContainer,
+  switchToggleWrapper,
+} from './headerStyles';
 import { BRAND_NAME, SUN_ICON, MOON_ICON } from '../../lib/constants';
 
 const Header = ({ handleToggleMenu }) => {
@@ -10,11 +15,11 @@ const Header = ({ handleToggleMenu }) => {
   // const [dark, setDark] = useDarkMode();
 
   return (
-    <header className="flex justify-between p-4 md:p-6 bg-brandRed text-white sticky top-0">
-      <button className="uppercase" onClick={handleToggleMenu}>
+    <header className={headerWrapper}>
+      <button className={headerItems} onClick={handleToggleMenu}>
         Menu
       </button>
-      <p className="uppercase">{BRAND_NAME}</p>
+      <p className={headerItems}>{BRAND_NAME}</p>
       <Switch
         checked={enabled}
         onChange={setEnabled}
