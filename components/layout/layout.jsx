@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import Header from './header';
-import Navbar from './navbar';
-import Footer from './footer';
+import Header from '../header';
+import Navbar from '../navbar';
+import Footer from '../footer';
+import { mainWrapper, layoutContainer } from './layoutStyles';
 
 const Layout = ({ children }) => {
   const [showMenu, setShowMenu] = useState(false);
@@ -9,10 +10,10 @@ const Layout = ({ children }) => {
   const handleToggleMenu = () => setShowMenu(!showMenu);
 
   return (
-    <div>
+    <div className={layoutContainer}>
       <Header />
       <Navbar handleToggleMenu={handleToggleMenu} />
-      <main>{children}</main>
+      <main className={mainWrapper}>{children}</main>
       <Footer />
     </div>
   );
