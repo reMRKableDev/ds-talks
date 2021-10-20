@@ -1,5 +1,6 @@
 import { Switch } from '@headlessui/react';
 import SiteIcon from '../shared/siteIcon';
+import SiteLink from '../shared/siteLink';
 import useDarkMode from '../../hooks/useDarkMode';
 import {
   isEnabled,
@@ -20,7 +21,7 @@ const Header = ({ handleToggleMenu }) => {
       <button type="button" className={headerItems} onClick={handleToggleMenu}>
         <SiteIcon name={MENU_ICON} />
       </button>
-      <p className={headerItems}>{BRAND_NAME}</p>
+      <SiteLink className={headerItems} linkTo="/" value={BRAND_NAME} />
       <Switch
         checked={enabled}
         onChange={handleEnableSwitch}
