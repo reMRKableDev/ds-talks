@@ -1,6 +1,5 @@
 import { Switch } from '@headlessui/react';
-import { MenuAlt4Icon } from '@heroicons/react/outline';
-import SiteIcon from '../shared/siteIcon';
+import { SunIcon, MoonIcon, MenuAlt4Icon } from '@heroicons/react/outline';
 import SiteLink from '../shared/siteLink';
 import useDarkMode from '../../hooks/useDarkMode';
 import {
@@ -28,13 +27,24 @@ const Header = ({ handleToggleMenu }) => {
           aria-hidden="true"
           className={`${isEnabled(enabled, TRANSLATE)} ${switchToggleWrapper}`}
         >
-          <SiteIcon name={isEnabled(enabled)} />
+          {enabled ? (
+            <MoonIcon className="text-white" />
+          ) : (
+            <SunIcon className="text-black" />
+          )}
         </span>
       </Switch>
       <SiteLink className={headerItems} linkTo="/" value={BRAND_NAME} />
-      <button type="button" className={headerItems} onClick={handleToggleMenu}>
+
+      <div
+        role="button"
+        tabIndex={0}
+        className={headerItems}
+        onClick={handleToggleMenu}
+        onKeyPress={handleToggleMenu}
+      >
         <MenuAlt4Icon className="block h-8 w-8 text-black dark:text-white" />
-      </button>
+      </div>
     </header>
   );
 };
