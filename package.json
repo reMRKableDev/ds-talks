@@ -9,7 +9,7 @@
     "@styled-icons/simple-icons": "10.45.0",
     "@testing-library/jest-dom": "5.14.1",
     "@testing-library/react": "12.1.2",
-    "@testing-library/user-event": "13.3.0",
+    "@testing-library/user-event": "13.5.0",
     "axios": "0.23.0",
     "leaflet": "1.7.1",
     "next": "latest",
@@ -19,7 +19,7 @@
     "react-dom": "latest",
     "react-h5-audio-player": "3.7.2",
     "react-leaflet": "3.2.2",
-    "styled-components": "5.3.1",
+    "styled-components": "5.3.3",
     "styled-theming": "2.2.0",
     "web-vitals": "2.1.2"
   },
@@ -39,7 +39,7 @@
     "@next/bundle-analyzer": "^11.1.2",
     "autoprefixer": "^10.3.7",
     "babel-eslint": "^10.1.0",
-    "eslint": "7.32.0",
+    "eslint": "8.0.1",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-next": "11.1.2",
     "eslint-config-prettier": "^8.3.0",
@@ -48,6 +48,6 @@
     "eslint-plugin-prettier": "^4.0.0",
     "postcss": "^8.3.9",
     "prettier": "^2.4.1",
-    "tailwindcss": "^2.2.16"
+    "tailwindcss": "^2.2.17"
   }
 }
