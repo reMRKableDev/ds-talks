@@ -10,6 +10,11 @@ relative inline-flex flex-shrink-0 items-center h-6 w-12 rounded-full cursor-poi
 
 export const switchToggleWrapper = `inline-block w-5 h-5 transform bg-brandRed rounded-full shadow-lg transform ring-0 transition ease-in-out duration-100 p-0.5 md: transition duration-500 ease-in-out hover:scale-150`;
 
+export const menuIcon = `block h-8 w-8 text-black dark:text-white`;
+
+export const setIconColor = (isMoon) =>
+  isMoon === 'moon' ? `text-white` : `text-black`;
+
 export const isEnabled = (isEnabledValue, styleType) => {
   switch (styleType) {
     case BG:

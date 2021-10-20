@@ -3,8 +3,10 @@ import { SunIcon, MoonIcon, MenuAlt4Icon } from '@heroicons/react/outline';
 import SiteLink from '../shared/siteLink';
 import useDarkMode from '../../hooks/useDarkMode';
 import {
+  menuIcon,
   isEnabled,
   headerItems,
+  setIconColor,
   headerWrapper,
   switchContainer,
   switchToggleWrapper,
@@ -28,9 +30,9 @@ const Header = ({ handleToggleMenu }) => {
           className={`${isEnabled(enabled, TRANSLATE)} ${switchToggleWrapper}`}
         >
           {enabled ? (
-            <MoonIcon className="text-white" />
+            <MoonIcon className={setIconColor('moon')} />
           ) : (
-            <SunIcon className="text-black" />
+            <SunIcon className={setIconColor('sun')} />
           )}
         </span>
       </Switch>
@@ -43,7 +45,7 @@ const Header = ({ handleToggleMenu }) => {
         onClick={handleToggleMenu}
         onKeyPress={handleToggleMenu}
       >
-        <MenuAlt4Icon className="block h-8 w-8 text-black dark:text-white" />
+        <MenuAlt4Icon className={menuIcon} />
       </div>
     </header>
   );
