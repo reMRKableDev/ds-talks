@@ -19,10 +19,6 @@ const Header = ({ handleToggleMenu }) => {
 
   return (
     <header className={headerWrapper}>
-      <button type="button" className={headerItems} onClick={handleToggleMenu}>
-        <MenuAlt4Icon className="block h-8 w-8 text-black dark:text-white" />
-      </button>
-      <SiteLink className={headerItems} linkTo="/" value={BRAND_NAME} />
       <Switch
         checked={enabled}
         onChange={handleEnableSwitch}
@@ -35,6 +31,10 @@ const Header = ({ handleToggleMenu }) => {
           <SiteIcon name={isEnabled(enabled)} />
         </span>
       </Switch>
+      <SiteLink className={headerItems} linkTo="/" value={BRAND_NAME} />
+      <button type="button" className={headerItems} onClick={handleToggleMenu}>
+        <MenuAlt4Icon className="block h-8 w-8 text-black dark:text-white" />
+      </button>
     </header>
   );
 };
