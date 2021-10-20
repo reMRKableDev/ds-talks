@@ -1,6 +1,6 @@
 import { BG, TRANSLATE } from '../../lib/constants';
 
-export const headerWrapper = `flex justify-between items-center p-4 md:p-6  text-white sticky top-0`;
+export const headerWrapper = `flex justify-between items-center pt-4 px-4 md:pt-6 md:px-6 bg-white text-white sticky top-0`;
 
 export const headerItems = `uppercase mt-0.5 select-none md:text-lg`;
 

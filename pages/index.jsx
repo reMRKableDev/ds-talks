@@ -1,7 +1,8 @@
+import Hero from '../components/hero';
+
 const Home = () => (
   <div>
-    <h1 className="font-title h-screen">I am title</h1>
-    <p>Regular text</p>
+    <Hero />
   </div>
 );
 
