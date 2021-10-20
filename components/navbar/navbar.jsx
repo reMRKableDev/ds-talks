@@ -2,7 +2,6 @@ import { Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { XIcon } from '@heroicons/react/outline';
 import SiteLink from '../shared/siteLink';
-import SiteIcon from '../shared/siteIcon';
 import { BRAND_NAME } from '../../lib/constants';
 
 const Navbar = ({ showMenu, handleToggleMenu }) => (
@@ -37,7 +36,7 @@ const Navbar = ({ showMenu, handleToggleMenu }) => (
             <div className="relative w-screen max-w-md">
               <div className="h-full flex flex-col py-6 bg-white shadow-xl overflow-y-scroll">
                 <div className=" flex align-center justify-between px-4 sm:px-6">
-                  <Dialog.Title className="text-lg font-medium text-gray-900">
+                  <Dialog.Title className="text-lg font-medium text-gray-900 uppercase">
                     {BRAND_NAME}
                   </Dialog.Title>
                   <button type="button" onClick={handleToggleMenu}>
@@ -52,11 +51,26 @@ const Navbar = ({ showMenu, handleToggleMenu }) => (
                   {/* Replace with your content */}
                   <div className="absolute inset-0 px-4 sm:px-6">
                     <div className="flex flex-col  align-center h-full">
-                      <SiteLink linkTo="/" value="Home" />
-                      <SiteLink linkTo="/map" value="Map" />
+                      <div className="flex flex-col gap-2">
+                        <SiteLink linkTo="/" value="Home" />
+                        <SiteLink linkTo="/map" value="Map" />
+                        <SiteLink
+                          externalLink="https://www.t-zerdance.com/"
+                          value="About host"
+                        />
+                      </div>
                       <p>Follow on Social Media</p>
                       <p>Support on Patreon</p>
                       <p>Subscribe to</p>
+                      <p>
+                        Made with love by{' '}
+                        <span>
+                          <SiteLink
+                            externalLink="https://remrkabledev.com/"
+                            value="reMRKable Dev"
+                          />
+                        </span>
+                      </p>
                     </div>
                   </div>
                   {/* /End replace */}
