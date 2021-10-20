@@ -1,4 +1,5 @@
 import { Switch } from '@headlessui/react';
+import { MenuAlt4Icon } from '@heroicons/react/outline';
 import SiteIcon from '../shared/siteIcon';
 import SiteLink from '../shared/siteLink';
 import useDarkMode from '../../hooks/useDarkMode';
@@ -9,7 +10,7 @@ import {
   switchContainer,
   switchToggleWrapper,
 } from './headerStyles';
-import { BRAND_NAME, BG, TRANSLATE, MENU_ICON } from '../../lib/constants';
+import { BRAND_NAME, BG, TRANSLATE } from '../../lib/constants';
 
 const Header = ({ handleToggleMenu }) => {
   const [enabled, setEnabled] = useDarkMode();
@@ -19,7 +20,7 @@ const Header = ({ handleToggleMenu }) => {
   return (
     <header className={headerWrapper}>
       <button type="button" className={headerItems} onClick={handleToggleMenu}>
-        <SiteIcon name={MENU_ICON} />
+        <MenuAlt4Icon className="block h-8 w-8 text-black dark:text-white" />
       </button>
       <SiteLink className={headerItems} linkTo="/" value={BRAND_NAME} />
       <Switch
