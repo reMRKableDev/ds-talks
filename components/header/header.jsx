@@ -5,6 +5,7 @@ import useDarkMode from '../../hooks/useDarkMode';
 import {
   menuIcon,
   isEnabled,
+  headerLogo,
   headerItems,
   setIconColor,
   headerWrapper,
@@ -36,7 +37,7 @@ const Header = ({ handleToggleMenu }) => {
           )}
         </span>
       </Switch>
-      <SiteLink className={headerItems} linkTo="/" value={BRAND_NAME} />
+      <SiteLink className={headerLogo} linkTo="/" value={BRAND_NAME} />
 
       <div
         role="button"
