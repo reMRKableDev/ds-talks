@@ -4,6 +4,9 @@
 
 This is a personal project done for the podcast Dance Specific TALKS. 
 
+![DS-Cover-Image](./src/assets/images/ds-talks-banner.jpg)
+
+At this time, you can view markers on a map that point to the countries where the guests are from.
 
 ## Acknowledgements
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
