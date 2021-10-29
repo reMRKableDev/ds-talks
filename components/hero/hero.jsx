@@ -13,7 +13,7 @@ import {
 } from './heroStyles';
 
 const Hero = () => (
-  <div className={heroContainer}>
+  <section className={heroContainer}>
     <div className={heroWrapper}>
       <h1 className={heroTitleWrapper}>
         <span className={heroTitleChild1}>Dance Specific</span>{' '}
@@ -30,7 +30,7 @@ const Hero = () => (
         />
       </div>
     </div>
-  </div>
+  </section>
 );
 
 export default Hero;

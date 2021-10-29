@@ -1,4 +1,4 @@
-export const heroContainer = 'h-5/6 px-4 md:px-6';
+export const heroContainer = 'h-5/6 px-4 py-2 md:h-1/2 md:px-6 md:px-3';
 export const heroWrapper =
   'select-none h-full flex flex-col justify-center items-center';
 export const heroTitleWrapper =

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Header from '../header';
 import Navbar from '../navbar';
-import Footer from '../footer';
+/* import Footer from '../footer'; */
 import { mainWrapper, layoutContainer } from './layoutStyles';
 
 const Layout = ({ children }) => {
@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
       <Header handleToggleMenu={handleToggleMenu} />
       <Navbar showMenu={showMenu} handleToggleMenu={handleToggleMenu} />
       <main className={mainWrapper}>{children}</main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
