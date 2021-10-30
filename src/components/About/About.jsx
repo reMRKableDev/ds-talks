@@ -35,7 +35,7 @@ const About = () => (
             is a unique podcast, with stories from dancers worldwide.
           </StyledDescriptionParagraph>
           <StyledDescriptionLinkContainer>
-            <StyledDescriptionLink to="/map">See Map</StyledDescriptionLink>
+            <StyledDescriptionLink to="/map">Check out our stories of map</StyledDescriptionLink>
           </StyledDescriptionLinkContainer>
         </StyledDescriptionTextContainer>
       </StyledDescriptionContainer>
