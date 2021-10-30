@@ -51,8 +51,8 @@ export const StyledFooter = styled.footer`
   flex-direction: column;
   position: fixed;
   bottom: 0;
-  left: 0;
   height: 300px;
+  margin-top: auto;
   z-index: -1;
 `;
 
@@ -83,8 +83,8 @@ export const StyledFooterPhrase = styled.p`
 export const StyledFooterDeveloperTag = styled.p`
   color: ${textColor};
   margin-bottom: 1em;
-
   a {
+    position: relative;
     color: #fff;
     text-decoration: none;
     cursor: pointer;
