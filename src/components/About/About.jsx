@@ -3,9 +3,9 @@ import React from 'react';
 import {
   StyledAboutSection,
   StyledDescriptionContainer,
-  StyledDescriptionFigureContainer,
-  StyledDescriptionFigure,
-  StyledDescriptionFigureImage,
+  // StyledDescriptionFigureContainer,
+  // StyledDescriptionFigure,
+  // StyledDescriptionFigureImage,
   StyledDescriptionTextContainer,
   StyledDescriptionParagraph,
   StyledDescriptionTextHighlight,
@@ -13,19 +13,19 @@ import {
   StyledDescriptionLinkContainer,
   StyledDescriptionLink,
 } from './AboutStyles';
-import MicrophoneIcon from '../../assets/icons/podcast-mic.svg';
+// import MicrophoneIcon from '../../assets/icons/podcast-mic.svg';
 
 const About = () => (
     <StyledAboutSection>
       <StyledDescriptionContainer className="row">
-        <StyledDescriptionFigureContainer className="column">
+        {/* <StyledDescriptionFigureContainer className="column">
           <StyledDescriptionFigure>
             <StyledDescriptionFigureImage
               src={MicrophoneIcon}
               alt="podcast-mic"
             />
           </StyledDescriptionFigure>
-        </StyledDescriptionFigureContainer>
+        </StyledDescriptionFigureContainer> */}
         <StyledDescriptionTextContainer className="double-column">
           <StyledDescriptionParagraph>
             <StyledDescriptionTextHighlight>
