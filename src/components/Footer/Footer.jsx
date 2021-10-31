@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Emoji from '../Emoji/Emoji';
 import {
   StyledFooter,
@@ -15,7 +16,7 @@ const Footer = () => (
       <StyledFooterPhrase>for checking this out!</StyledFooterPhrase>
       <StyledFooterDeveloperTag>
         Made with <Emoji symbol="❤️" label="love" /> by{' '}
-        <a href="https://remrkabledev.com/">reMRKable Dev</a>
+        <Link to={{pathname: "https://remrkabledev.com/"}} target="_blank">reMRKable Dev</Link>
       </StyledFooterDeveloperTag>
     </StyledFooter>
   );
