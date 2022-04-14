@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Header from './header';
 import Navbar from './navbar';
 /* import Footer from './footer'; */
-import { mainWrapper, layoutContainer } from './layoutStyles';
 
 const Layout = ({ children }) => {
   const [showMenu, setShowMenu] = useState(false);
@@ -10,10 +9,10 @@ const Layout = ({ children }) => {
   const handleToggleMenu = () => setShowMenu(!showMenu);
 
   return (
-    <div className={layoutContainer}>
+    <div className="flex flex-col h-screen relative dark:bg-black">
       <Header handleToggleMenu={handleToggleMenu} />
       <Navbar showMenu={showMenu} handleToggleMenu={handleToggleMenu} />
-      <main className={mainWrapper}>{children}</main>
+      <main className="flex-grow">{children}</main>
       {/* <Footer /> */}
     </div>
   );

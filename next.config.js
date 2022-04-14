@@ -8,4 +8,5 @@ module.exports = withBundleAnalyzer({
   },
   trailingSlash: true,
   experimental: { modern: true },
+  reactStrictMode: true,
 });
