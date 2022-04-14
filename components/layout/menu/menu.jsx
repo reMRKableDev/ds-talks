@@ -1,9 +1,9 @@
 import { Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import menuOverflow from './MenuOverflow';
-import menuGroup from './MenuGroup';
-import menuMain from './MenuMain';
-import menuHeader from './MenuHeader';
+import MenuOverflow from './menuOverflow';
+import MenuGroup from './menuGroup';
+import MenuMain from './menuMain';
+import MenuHeader from './menuHeader';
 import {
   menuOverflowWrapper,
   menuContainer,
