@@ -7,4 +7,5 @@ module.exports = withBundleAnalyzer({
     dirs: ['pages', 'lib', 'hooks', 'components'],
   },
   trailingSlash: true,
+  experimental: { modern: true },
 });

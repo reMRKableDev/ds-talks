@@ -1,4 +1,4 @@
-import SiteLink from '../../shared/siteLink';
+import SiteLink from 'components/shared/siteLink';
 import {
   DEV,
   MAP,
@@ -8,7 +8,7 @@ import {
   MAP_SLUG,
   HOME_SLUG,
   TZER_LINK,
-} from '../../../lib/constants';
+} from 'lib/constants';
 import {
   mainWrapper,
   mainContent,

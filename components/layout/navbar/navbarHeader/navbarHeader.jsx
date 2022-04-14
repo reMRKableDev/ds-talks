@@ -1,6 +1,6 @@
 import { Dialog } from '@headlessui/react';
 import { XIcon } from '@heroicons/react/outline';
-import { BRAND_NAME } from '../../../lib/constants';
+import { BRAND_NAME } from 'lib/constants';
 import {
   navbarHeaderIcon,
   navbarHeaderTitle,

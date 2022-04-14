@@ -1,7 +1,7 @@
 import { Switch } from '@headlessui/react';
 import { SunIcon, MoonIcon, MenuAlt4Icon } from '@heroicons/react/outline';
-import SiteLink from '../shared/siteLink';
-import useDarkMode from '../../hooks/useDarkMode';
+import SiteLink from '../../shared/siteLink';
+import useDarkMode from '../../../hooks/useDarkMode';
 import {
   menuIcon,
   isEnabled,
@@ -12,7 +12,7 @@ import {
   switchContainer,
   switchToggleWrapper,
 } from './headerStyles';
-import { BRAND_NAME, BG, TRANSLATE } from '../../lib/constants';
+import { BRAND_NAME, BG, TRANSLATE } from 'lib/constants/';
 
 const Header = ({ handleToggleMenu }) => {
   const [enabled, setEnabled] = useDarkMode();
