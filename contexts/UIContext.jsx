@@ -36,16 +36,19 @@ export const useUI = () => {
   return context;
 };
 
-export const UIContextProvider = () => {
+export const UIContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(uiReducer, initialState);
 
   const handleOpenMenu = () => dispatch({ type: openMenu });
   const handleCloseMenu = () => dispatch({ type: closeMenu });
+  const handleToggleMenu = () =>
+    state.displayMenu ? handleCloseMenu() : handleOpenMenu();
 
   const contextValue = useMemo(() => ({
     ...state,
     handleOpenMenu,
     handleCloseMenu,
+    handleToggleMenu,
   }));
 
   return (

@@ -1,6 +1,7 @@
 import { SunIcon, MoonIcon, MenuAlt4Icon } from '@heroicons/react/outline';
 import SiteLink from 'components/shared/siteLink';
 import useDarkMode from 'hooks/useDarkMode';
+import { useUI } from 'contexts/UIContext';
 import {
   menuIcon,
   isEnabled,
@@ -11,11 +12,12 @@ import {
   switchContainer,
   switchToggleWrapper,
 } from './headerStyles';
-import Button from 'components/shared/ui/Button';
+import Button from 'components/shared/ui/button';
 import { BRAND_NAME, BG, TRANSLATE } from 'lib/constants/';
 
-const Header = ({ handleToggleMenu }) => {
+const Header = () => {
   const [enabled, setEnabled] = useDarkMode();
+  const { handleToggleMenu } = useUI();
 
   const handleEnableSwitch = () => setEnabled(!enabled);
 
