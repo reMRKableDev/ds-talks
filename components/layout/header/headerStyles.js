@@ -2,6 +2,8 @@ import { BG, TRANSLATE } from 'lib/constants';
 
 export const headerWrapper = `flex justify-between items-center p-4 z-10 md:p-6 bg-white text-white sticky top-0 dark:bg-black dark:text-black`;
 
+export const headerThemeSwitcher = `h-[200px] w-[200px]`;
+
 export const headerItems = `uppercase select-none md:text-lg text-black dark:text-white self-center`;
 
 export const headerLogo = `uppercase select-none text-xl  text-black dark:text-white self-center`;
@@ -15,7 +17,7 @@ export const switchToggleWrapper = `inline-block w-5 h-5 transform bg-brandRed r
 export const menuIcon = `block h-8 w-8 text-black dark:text-white`;
 
 export const setIconColor = (isMoon) =>
-  isMoon === 'moon' ? `text-white` : `text-black`;
+  isMoon === 'moon' ? `text-white bg-none` : `text-black bg-none`;
 
 export const isEnabled = (isEnabledValue, styleType) => {
   switch (styleType) {

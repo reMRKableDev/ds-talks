@@ -1,7 +1,6 @@
-import { Switch } from '@headlessui/react';
 import { SunIcon, MoonIcon, MenuAlt4Icon } from '@heroicons/react/outline';
-import SiteLink from '../../shared/siteLink';
-import useDarkMode from '../../../hooks/useDarkMode';
+import SiteLink from 'components/shared/siteLink';
+import useDarkMode from 'hooks/useDarkMode';
 import {
   menuIcon,
   isEnabled,
@@ -12,6 +11,7 @@ import {
   switchContainer,
   switchToggleWrapper,
 } from './headerStyles';
+import Button from 'components/shared/ui/Button';
 import { BRAND_NAME, BG, TRANSLATE } from 'lib/constants/';
 
 const Header = ({ handleToggleMenu }) => {
@@ -21,9 +21,8 @@ const Header = ({ handleToggleMenu }) => {
 
   return (
     <header className={headerWrapper}>
-      <Switch
-        checked={enabled}
-        onChange={handleEnableSwitch}
+      <Button
+        onClick={handleEnableSwitch}
         className={`${isEnabled(enabled, BG)} ${switchContainer}`}
       >
         <span
@@ -36,18 +35,12 @@ const Header = ({ handleToggleMenu }) => {
             <SunIcon className={setIconColor('sun')} />
           )}
         </span>
-      </Switch>
+      </Button>
       <SiteLink className={headerLogo} linkTo="/" value={BRAND_NAME} />
 
-      <div
-        role="button"
-        tabIndex={0}
-        className={headerItems}
-        onClick={handleToggleMenu}
-        onKeyPress={handleToggleMenu}
-      >
+      <Button className={headerItems} onClick={handleToggleMenu}>
         <MenuAlt4Icon className={menuIcon} />
-      </div>
+      </Button>
     </header>
   );
 };

@@ -5,7 +5,6 @@ import Navbar from './navbar';
 
 const Layout = ({ children }) => {
   const [showMenu, setShowMenu] = useState(false);
-
   const handleToggleMenu = () => setShowMenu(!showMenu);
 
   return (
