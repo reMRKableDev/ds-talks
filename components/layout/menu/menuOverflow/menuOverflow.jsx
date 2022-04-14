@@ -8,9 +8,9 @@ import {
   transitionLeaveTo,
   transitionLeaveFrom,
   transitionLeave,
-} from './navbarOverflowStyles';
+} from './menuOverflowStyles';
 
-const NavbarOverflow = () => (
+const MenuOverflow = () => (
   <Transition.Child
     as={Fragment}
     enter={transitionEnter}
@@ -24,4 +24,4 @@ const NavbarOverflow = () => (
   </Transition.Child>
 );
 
-export default NavbarOverflow;
+export default MenuOverflow;

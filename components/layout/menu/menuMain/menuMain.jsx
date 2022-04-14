@@ -14,9 +14,9 @@ import {
   mainContent,
   mainContainer,
   mainContentLinks,
-} from './navbarMainStyles';
+} from './menuMainStyles';
 
-const NavbarMain = () => (
+const MenuMain = () => (
   <div className={mainContainer}>
     <div className={mainWrapper}>
       <div className={mainContent}>
@@ -39,4 +39,4 @@ const NavbarMain = () => (
   </div>
 );
 
-export default NavbarMain;
+export default MenuMain;

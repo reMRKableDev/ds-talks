@@ -4,14 +4,14 @@ import {
   transitionEnter,
   transitionLeave,
   transitionEnterTo,
-  navbarGroupWrapper,
+  menuGroupWrapper,
   transitionLeaveTo,
   transitionEnterFrom,
   transitionLeaveFrom,
-} from './navbarGroupStyles';
+} from './menuGroupStyles';
 
 const NavbarGroup = ({ children }) => (
-  <div className={navbarGroupWrapper}>
+  <div className={menuGroupWrapper}>
     <Transition.Child
       as={Fragment}
       enter={transitionEnter}

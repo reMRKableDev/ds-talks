@@ -1,4 +1,4 @@
-export const navbarGroupWrapper = `fixed inset-y-0 right-0 pl-10 max-w-full flex`;
+export const menuGroupWrapper = `fixed inset-y-0 right-0 pl-10 max-w-full flex`;
 
 export const transitionEnter = `transform transition ease-in-out duration-500 sm:duration-700`;
 export const transitionEnterFrom = `translate-x-full`;
