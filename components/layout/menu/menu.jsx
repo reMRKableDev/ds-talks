@@ -1,5 +1,6 @@
-import { Fragment } from 'react';
-import { Dialog, Transition } from '@headlessui/react';
+import { useEffect } from 'react';
+import { useSpring, animated } from 'react-spring';
+import { useUI } from 'hooks';
 import MenuOverflow from './menuOverflow';
 import MenuGroup from './menuGroup';
 import MenuMain from './menuMain';
@@ -11,26 +12,49 @@ import {
   menuOverflowContainer,
 } from './menuStyles';
 
-const Menu = ({ showMenu, handleToggleMenu }) => {
-  return <div className="border-2 border-solid border-red-500">MENU</div>;
-  /* <Transition.Root show={showMenu} as={Fragment}>
-    <Dialog
-      as="div"
-      className={menuOverflowContainer}
-      onClose={handleToggleMenu}
-    >
-      <div className={menuOverflowWrapper}>
-        <MenuOverflow />
-        <MenuGroup>
-          <div className={menuContainer}>
-            <div className={menuWrapper}>
-              <MenuHeader handleToggleMenu={handleToggleMenu} />
-              <MenuMain />
-            </div>
-          </div>
-        </MenuGroup>
-      </div>
-    </Dialog>
-  </Transition.Root> */
+const Menu = () => {
+  const { displayMenu, handleCloseMenu } = useUI();
+
+  const [menuAnimationStyle, animateMenu] = useSpring(() => ({
+    transform: 'translateX(100%)',
+  }));
+  const [overlayStyle, animateOverlay] = useSpring(() => ({
+    opacity: 0,
+    visibility: 'hidden',
+  }));
+
+  useEffect(() => {
+    animateMenu({
+      transform: `translateX(${displayMenu ? '0%' : '100%'})`,
+    });
+
+    animateOverlay({
+      opacity: displayMenu ? 0.3 : 0,
+      visibility: 'visible',
+      onRest: () => {
+        animateOverlay({
+          immediate: true,
+          visibility: displayMenu ? 'visible' : 'hidden',
+        });
+      },
+    });
+  });
+
+  return (
+    <>
+      <animated.button
+        type="button"
+        style={overlayStyle}
+        onClick={() => handleCloseMenu()}
+        className="fixed top-0 left-0 z-20 h-screen w-full bg-[#041C2C] h-screen-ios md:z-40"
+      />
+      <animated.div
+        style={menuAnimationStyle}
+        className="fixed top-0 right-0 z-30 flex h-screen w-full flex-col bg-white text-black h-screen-ios md:z-50 md:w-[645px]"
+      >
+        MENU
+      </animated.div>
+    </>
+  );
 };
 export default Menu;

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { DARK } from '../lib/constants';
 
-export default function useDarkMode() {
+export const useDarkMode = () => {
   const [enabled, setEnabled] = useState(undefined);
 
   useEffect(() => {
@@ -21,4 +21,6 @@ export default function useDarkMode() {
   }, [enabled]);
 
   return [enabled, setEnabled];
-}
+};
+
+export default useDarkMode;
