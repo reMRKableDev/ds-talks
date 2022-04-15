@@ -50,7 +50,7 @@ module.exports = {
     ({ addComponents }) => {
       addComponents({
         '.button': {
-          '@apply font-nimbus-sans-extd-d uppercase justify-center text-[12px] text-white bg-[#041C2C] text-white inline-flex p-[12px] px-[18px] disabled:bg-gray-300 disabled:cursor-default':
+          '@apply  uppercase justify-center text-[12px] text-white bg-[#041C2C] text-white inline-flex p-[12px] px-[18px] disabled:bg-gray-300 disabled:cursor-default':
             {},
         },
         '.input': {

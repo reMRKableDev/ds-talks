@@ -12,7 +12,7 @@ import {
 } from './menuStyles';
 
 const Menu = ({ showMenu, handleToggleMenu }) => {
-  return <div className="h-[100vh]">MENU</div>;
+  return <div className="border-2 border-solid border-red-500">MENU</div>;
   /* <Transition.Root show={showMenu} as={Fragment}>
     <Dialog
       as="div"
