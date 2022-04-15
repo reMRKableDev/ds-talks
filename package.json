@@ -37,6 +37,7 @@
   ],
   "devDependencies": {
     "@next/bundle-analyzer": "^12.1.5",
+    "@rvxlab/tailwind-plugin-ios-full-height": "^1.1.0",
     "@types/node": "^17.0.24",
     "autoprefixer": "^10.4.4",
     "babel-eslint": "^10.1.0",

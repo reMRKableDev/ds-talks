@@ -11,8 +11,9 @@ import {
   menuOverflowContainer,
 } from './menuStyles';
 
-const Menu = ({ showMenu, handleToggleMenu }) => (
-  <Transition.Root show={showMenu} as={Fragment}>
+const Menu = ({ showMenu, handleToggleMenu }) => {
+  return <div className="h-[100vh]">MENU</div>;
+  /* <Transition.Root show={showMenu} as={Fragment}>
     <Dialog
       as="div"
       className={menuOverflowContainer}
@@ -30,6 +31,6 @@ const Menu = ({ showMenu, handleToggleMenu }) => (
         </MenuGroup>
       </div>
     </Dialog>
-  </Transition.Root>
-);
+  </Transition.Root> */
+};
 export default Menu;

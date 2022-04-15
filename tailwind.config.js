@@ -1,7 +1,12 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
+const iOSHeight = require('@rvxlab/tailwind-plugin-ios-full-height');
 
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  mode: 'jit',
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
@@ -40,5 +45,19 @@ module.exports = {
       animation: ['hover', 'focus'],
     },
   },
-  plugins: [],
+  plugins: [
+    iOSHeight,
+    ({ addComponents }) => {
+      addComponents({
+        '.button': {
+          '@apply font-nimbus-sans-extd-d uppercase justify-center text-[12px] text-white bg-[#041C2C] text-white inline-flex p-[12px] px-[18px] disabled:bg-gray-300 disabled:cursor-default':
+            {},
+        },
+        '.input': {
+          '@apply border border-solid block bg-transparent border-[rgba(4,28,44,0.1)] px-[18px] py-[16px]':
+            {},
+        },
+      });
+    },
+  ],
 };
