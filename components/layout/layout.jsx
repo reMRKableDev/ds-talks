@@ -1,4 +1,4 @@
-import { useUI } from 'contexts/UIContext';
+import { useUI } from 'hooks';
 import Header from './header';
 import Menu from './menu';
 /* import Footer from './footer'; */

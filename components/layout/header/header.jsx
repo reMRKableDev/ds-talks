@@ -1,7 +1,6 @@
 import { SunIcon, MoonIcon, MenuAlt4Icon } from '@heroicons/react/outline';
 import SiteLink from 'components/shared/siteLink';
-import useDarkMode from 'hooks/useDarkMode';
-import { useUI } from 'contexts/UIContext';
+import { useDarkMode, useUI } from 'hooks';
 import {
   menuIcon,
   isEnabled,
