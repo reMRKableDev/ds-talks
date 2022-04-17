@@ -1,10 +1,6 @@
 import { useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { useUI } from 'hooks';
-import MenuOverflow from './menuOverflow';
-import MenuGroup from './menuGroup';
-import MenuMain from './menuMain';
-import MenuHeader from './menuHeader';
 import {
   menuOverflowWrapper,
   menuContainer,
