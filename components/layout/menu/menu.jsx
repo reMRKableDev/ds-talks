@@ -1,11 +1,14 @@
 import { useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
+import { XIcon } from '@heroicons/react/outline';
 import { useUI } from 'hooks';
+import Button from 'components/shared/ui/button';
 import {
-  menuOverflowWrapper,
+  menuCloseIcon,
   menuContainer,
-  menuWrapper,
-  menuOverflowContainer,
+  menuHeaderItems,
+  menuHeaderWrapper,
+  menuOverlayContainer,
 } from './menuStyles';
 
 const Menu = () => {
@@ -18,6 +21,8 @@ const Menu = () => {
     opacity: 0,
     visibility: 'hidden',
   }));
+
+  const localScopedCloseMenuHandler = () => handleCloseMenu();
 
   useEffect(() => {
     animateMenu({
@@ -41,14 +46,19 @@ const Menu = () => {
       <animated.button
         type="button"
         style={overlayStyle}
-        onClick={() => handleCloseMenu()}
-        className="fixed top-0 left-0 z-20 h-screen w-full bg-[#041C2C] h-screen-ios md:z-40"
+        onClick={localScopedCloseMenuHandler}
+        className={menuOverlayContainer}
       />
-      <animated.div
-        style={menuAnimationStyle}
-        className="fixed top-0 right-0 z-30 flex h-screen w-full flex-col bg-white text-black h-screen-ios md:z-50 md:w-[645px]"
-      >
-        MENU
+      <animated.div style={menuAnimationStyle} className={menuContainer}>
+        <div className={menuHeaderWrapper}>
+          <Button
+            className={menuHeaderItems}
+            onClick={localScopedCloseMenuHandler}
+          >
+            <XIcon className={menuCloseIcon} />
+          </Button>
+        </div>
+        <div>MENU</div>
       </animated.div>
     </>
   );
