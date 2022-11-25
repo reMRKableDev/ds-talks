@@ -1,16 +1,6 @@
 import { SunIcon, MoonIcon, MenuAlt4Icon } from '@heroicons/react/outline';
 import SiteLink from 'components/shared/siteLink';
 import { useDarkMode, useUI } from 'hooks';
-import {
-  menuIcon,
-  isEnabled,
-  headerLogo,
-  headerItems,
-  setIconColor,
-  headerWrapper,
-  switchContainer,
-  switchToggleWrapper,
-} from './headerStyles';
 import Button from 'components/shared/ui/button';
 import { BRAND_NAME, BG, TRANSLATE } from 'lib/constants/';
 
@@ -20,15 +10,37 @@ const Header = () => {
 
   const handleEnableSwitch = () => setEnabled(!enabled);
 
+  const setIconColor = (isMoon) =>
+    isMoon === 'moon' ? `text-white bg-none` : `text-black bg-none`;
+
+  const isEnabled = (isEnabledValue, styleType) => {
+    switch (styleType) {
+      case BG:
+        return isEnabledValue ? 'bg-black' : 'bg-white';
+
+      case TRANSLATE:
+        return isEnabledValue ? 'translate-x-6' : 'translate-x-1';
+
+      default:
+        return null;
+    }
+  };
+
   return (
-    <header className={headerWrapper}>
+    <header className="uppercase flex justify-between items-center p-4 z-10 md:p-6 bg-white text-black sticky top-0 dark:bg-black dark:text-white">
       <Button
         onClick={handleEnableSwitch}
-        className={`${isEnabled(enabled, BG)} ${switchContainer}`}
+        className={`${isEnabled(
+          enabled,
+          BG
+        )} relative inline-flex flex-shrink-0 items-center h-6 w-12 rounded-full cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 transition-colors ease-in-out duration-200 border-solid border-2 border-black  dark:border-white`}
       >
         <span
           aria-hidden="true"
-          className={`${isEnabled(enabled, TRANSLATE)} ${switchToggleWrapper}`}
+          className={`${isEnabled(
+            enabled,
+            TRANSLATE
+          )} inline-block w-5 h-5 transform bg-brandRed rounded-full shadow-lg  ring-0 transition ease-in-out duration-100 p-0.5 md:transition duration-500 ease-in-out hover:scale-150 border-solid border-2 border-black`}
         >
           {enabled ? (
             <MoonIcon className={setIconColor('moon')} />
@@ -37,10 +49,10 @@ const Header = () => {
           )}
         </span>
       </Button>
-      <SiteLink className={headerLogo} linkTo="/" value={BRAND_NAME} />
+      <SiteLink className="select-none text-xl" linkTo="/" value={BRAND_NAME} />
 
-      <Button className={headerItems} onClick={handleToggleMenu}>
-        <MenuAlt4Icon className={menuIcon} />
+      <Button className="select-none md:text-lg" onClick={handleToggleMenu}>
+        <MenuAlt4Icon className="block h-4 w-4 md:h-8 md:w-8 text-black dark:text-white" />
       </Button>
     </header>
   );
