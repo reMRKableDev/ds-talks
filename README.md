@@ -6,5 +6,5 @@ This is a personal project done for the podcast Dance Specific TALKS.
 
 
 ## Acknowledgements
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is built with Next.js, React, and TailwindCSS.
 
