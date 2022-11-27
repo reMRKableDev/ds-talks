@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@heroicons/react": "v1",
+    "@heroicons/react": "2",
     "@styled-icons/simple-icons": "10.46.0",
     "@testing-library/jest-dom": "5.16.5",
     "axios": "1.2.0",
