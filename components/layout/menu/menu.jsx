@@ -1,9 +1,8 @@
 import { useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
-import { XIcon } from '@heroicons/react/outline';
+import { XMarkIcon } from '@heroicons/react/24/outline';
 import { useUI } from 'hooks';
 import Button from 'components/shared/ui/button';
-
 
 const Menu = () => {
   const { displayMenu, handleCloseMenu } = useUI();
@@ -52,7 +51,7 @@ const Menu = () => {
             className={`uppercase select-none md:text-lg text-black dark:text-white self-center`}
             onClick={localScopedCloseMenuHandler}
           >
-            <XIcon
+            <XMarkIcon
               className={`block h-4 w-4 md:h-8 md:w-8 text-black dark:text-white`}
             />
           </Button>
