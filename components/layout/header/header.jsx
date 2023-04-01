@@ -1,4 +1,4 @@
-import { SunIcon, MoonIcon, MenuAlt4Icon } from '@heroicons/react/outline';
+import { SunIcon, MoonIcon, Bars2Icon } from '@heroicons/react/24/outline/';
 import SiteLink from 'components/shared/siteLink';
 import { useDarkMode, useUI } from 'hooks';
 import Button from 'components/shared/ui/button';
@@ -52,7 +52,7 @@ const Header = () => {
       <SiteLink className="select-none text-xl" linkTo="/" value={BRAND_NAME} />
 
       <Button className="select-none md:text-lg" onClick={handleToggleMenu}>
-        <MenuAlt4Icon className="block h-4 w-4 md:h-8 md:w-8 text-black dark:text-white" />
+        <Bars2Icon className="block h-4 w-4 md:h-8 md:w-8 text-black dark:text-white" />
       </Button>
     </header>
   );

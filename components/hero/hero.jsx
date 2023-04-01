@@ -12,7 +12,7 @@ const Hero = () => (
       <p className="self-start my-10 text-black dark:text-white text-lg md:mt-5 md:text-xl">
         A unique podcast with stories from professional dancers worldwide!
       </p>
-      <div className="self-start rounded-full w-3/4 p-1 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 md:w-1/3 md:cursor-pointer transform motion-safe:hover:scale-110">
+      <div className="self-start rounded-full w-3/4 p-1 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 md:w-1/3 md:cursor-pointer transform motion-safe:hover:scale-100">
         <SiteLink
           className="py-3 px-6 flex justify-center rounded-full w-full bg-gradient-to-r from-white to-white text-black hover:text-white hover:from-yellow-400 hover:via-red-500 hover:to-pink-500 dark:from-black dark:to-black dark:text-white"
           linkTo={MAP_SLUG}
