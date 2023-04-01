@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { SUN_ICON, MOON_ICON, MENU_ICON } from '../../lib/constants';
 
 const SiteIcon = ({ name }) => {
