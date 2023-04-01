@@ -1,4 +1,9 @@
-import { SUN_ICON, MOON_ICON, MENU_ICON } from '../../lib/constants';
+import {
+  SUN_ICON,
+  MOON_ICON,
+  MENU_ICON,
+  CLOSE_ICON,
+} from '../../lib/constants';
 
 const SiteIcon = ({ name }) => {
   switch (name) {
@@ -8,7 +13,8 @@ const SiteIcon = ({ name }) => {
       return <img src="/moon.svg" alt="Moon Icon" height="40" width="40" />;
     case MENU_ICON:
       return <img src="/menu.svg" alt="Menu Icon" height="40" width="40" />;
-
+    case CLOSE_ICON:
+      return <img src="/close.svg" alt="Close Icon" height="40" width="40" />;
     default:
       return null;
   }

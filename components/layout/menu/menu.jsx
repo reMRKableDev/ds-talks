@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
-import { XMarkIcon } from '@heroicons/react/24/outline';
 import { useUI } from 'hooks';
 import Button from 'components/shared/ui/button';
+import SiteIcon from 'components/shared/siteIcon';
+import { CLOSE_ICON } from 'lib/constants';
 
 const Menu = () => {
   const { displayMenu, handleCloseMenu } = useUI();
@@ -51,9 +52,11 @@ const Menu = () => {
             className={`uppercase select-none md:text-lg text-black dark:text-white self-center`}
             onClick={localScopedCloseMenuHandler}
           >
-            <XMarkIcon
+            <span
               className={`block h-4 w-4 md:h-8 md:w-8 text-black dark:text-white`}
-            />
+            >
+              <SiteIcon name={CLOSE_ICON} />
+            </span>
           </Button>
         </div>
         <div>MENU</div>
