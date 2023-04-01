@@ -48,7 +48,7 @@ const Header = () => {
           className={`${isEnabled(
             enabled,
             TRANSLATE
-          )} inline-block w-5 h-5 transform bg-brandRed rounded-full shadow-lg  ring-0 transition ease-in-out duration-100 p-0.5 md:transition duration-500 ease-in-out hover:scale-150 border-solid border-2 border-black`}
+          )} inline-block w-5 h-5 transform bg-brandRed rounded-full shadow-lg  ring-0 transition ease-in-out duration-100 p-0.5 md:transition hover:scale-150 border-solid border-2 border-black`}
         >
           <span
             className={
