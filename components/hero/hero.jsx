@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import SiteLink from '../shared/siteLink';
 import { MAP_SLUG, SEE_MAP } from '../../lib/constants';
 

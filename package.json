@@ -14,7 +14,7 @@
     "react-dom": "latest",
     "react-h5-audio-player": "3.8.6",
     "react-leaflet": "4.2.1",
-    "react-spring": "^9.6.1",
+    "react-spring": "^9.7.1",
     "styled-components": "5.3.9",
     "styled-theming": "2.2.0",
     "web-vitals": "3.3.0"
@@ -32,22 +32,22 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@babel/eslint-parser": "^7.11.0",
-    "@next/bundle-analyzer": "^13.1.6",
+    "@babel/eslint-parser": "^7.21.3",
+    "@next/bundle-analyzer": "^13.2.4",
     "@rvxlab/tailwind-plugin-ios-full-height": "^1.1.0",
-    "@types/node": "^18.13.0",
-    "@types/react": "^18.0.27",
-    "autoprefixer": "^10.4.13",
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.31",
+    "autoprefixer": "^10.4.14",
     "eslint": "8.37.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "13.2.4",
-    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-prettier": "^4.2.1",
     "postcss": "^8.4.21",
-    "prettier": "^2.8.4",
-    "tailwindcss": "^3.2.6",
-    "typescript": "^5.0.0"
+    "prettier": "^2.8.7",
+    "tailwindcss": "^3.3.1",
+    "typescript": "^5.0.3"
   }
 }

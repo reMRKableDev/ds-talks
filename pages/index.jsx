@@ -1,10 +1,10 @@
 import Hero from '../components/hero';
-import LatestEpisodes from '../components/latestEpisodes';
+// import LatestEpisodes from '../components/latestEpisodes';
 
 const Home = () => (
   <>
     <Hero />
-    <LatestEpisodes />
+    {/*     <LatestEpisodes /> */}
   </>
 );
 
