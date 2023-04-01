@@ -1,8 +1,16 @@
-import { SunIcon, MoonIcon, Bars2Icon } from '@heroicons/react/24/outline/';
+/* import { SunIcon, MoonIcon, Bars2Icon } from '@heroicons/react/24/outline/'; */
 import SiteLink from 'components/shared/siteLink';
+import SiteIcon from 'components/shared/siteIcon';
 import { useDarkMode, useUI } from 'hooks';
 import Button from 'components/shared/ui/button';
-import { BRAND_NAME, BG, TRANSLATE } from 'lib/constants/';
+import {
+  BG,
+  SUN_ICON,
+  MOON_ICON,
+  MENU_ICON,
+  TRANSLATE,
+  BRAND_NAME,
+} from 'lib/constants/';
 
 const Header = () => {
   const [enabled, setEnabled] = useDarkMode();
@@ -11,7 +19,7 @@ const Header = () => {
   const handleEnableSwitch = () => setEnabled(!enabled);
 
   const setIconColor = (isMoon) =>
-    isMoon === 'moon' ? `text-white bg-none` : `text-black bg-none`;
+    isMoon === MOON_ICON ? `text-white bg-none` : `text-black bg-none`;
 
   const isEnabled = (isEnabledValue, styleType) => {
     switch (styleType) {
@@ -42,17 +50,21 @@ const Header = () => {
             TRANSLATE
           )} inline-block w-5 h-5 transform bg-brandRed rounded-full shadow-lg  ring-0 transition ease-in-out duration-100 p-0.5 md:transition duration-500 ease-in-out hover:scale-150 border-solid border-2 border-black`}
         >
-          {enabled ? (
-            <MoonIcon className={setIconColor('moon')} />
-          ) : (
-            <SunIcon className={setIconColor('sun')} />
-          )}
+          <span
+            className={
+              enabled ? setIconColor(MOON_ICON) : setIconColor(SUN_ICON)
+            }
+          >
+            <SiteIcon name={enabled ? MOON_ICON : SUN_ICON} />
+          </span>
         </span>
       </Button>
       <SiteLink className="select-none text-xl" linkTo="/" value={BRAND_NAME} />
 
       <Button className="select-none md:text-lg" onClick={handleToggleMenu}>
-        <Bars2Icon className="block h-4 w-4 md:h-8 md:w-8 text-black dark:text-white" />
+        <span className="block h-4 w-4 md:h-8 md:w-8 text-black dark:text-white">
+          <SiteIcon name={MENU_ICON} />
+        </span>
       </Button>
     </header>
   );
