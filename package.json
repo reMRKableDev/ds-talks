@@ -6,7 +6,7 @@
   "dependencies": {
     "@heroicons/react": "2",
     "@styled-icons/simple-icons": "10.46.0",
-    "@testing-library/jest-dom": "5.16.5",
+    "@testing-library/jest-dom": "5.17.0",
     "axios": "1.4.0",
     "leaflet": "1.9.4",
     "next": "latest",
