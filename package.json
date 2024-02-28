@@ -7,7 +7,7 @@
     "@heroicons/react": "2",
     "@styled-icons/simple-icons": "10.46.0",
     "@testing-library/jest-dom": "5.17.0",
-    "axios": "1.4.0",
+    "axios": "1.6.7",
     "leaflet": "1.9.4",
     "next": "latest",
     "prop-types": "15.8.1",
