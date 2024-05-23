@@ -3718,10 +3718,10 @@ util-deprecate@^1.0.2:
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==
 
-web-vitals@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/web-vitals/-/web-vitals-4.0.0.tgz#888b5ddb17f292673cdeb2b3ae0d6c2ff16d5e31"
-  integrity sha512-8wQd4jkwFRwY5q3yAmHZAJ5MjnKR1vRACK+g2OEC8nUqi0WOxBrXfOxGNlJ+QtxzzSn/TkQO58wkW0coE68n0Q==
+web-vitals@4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/web-vitals/-/web-vitals-4.0.1.tgz#9fa4dfcd26130d6721717c5f2ff73adf3adbbe76"
+  integrity sha512-AW6qT/vXK3pbf+WgVcEBXY//AWCpXjVKgdb6rt0cARSUdtT+NUtZCOeo+CSLUX7PjSQ275DmxfkAs7QlPbtR6w==
 
 webpack-bundle-analyzer@4.10.1:
   version "4.10.1"
