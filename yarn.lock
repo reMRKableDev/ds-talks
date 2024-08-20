@@ -2996,10 +2996,10 @@ react-dom@latest:
     loose-envify "^1.1.0"
     scheduler "^0.21.0"
 
-react-h5-audio-player@3.9.1:
-  version "3.9.1"
-  resolved "https://registry.yarnpkg.com/react-h5-audio-player/-/react-h5-audio-player-3.9.1.tgz#8a9721fd7a5ff6a9185ce626435207bee1774e83"
-  integrity sha512-ILJdTXZgHEfv7WsvYPoN7afJncroYyg5Cxvs2qqrsnTzhtBdEuzlM0ETkhUhjqXOsAkbwAdHF9YgnEwgBJ8dCQ==
+react-h5-audio-player@3.9.3:
+  version "3.9.3"
+  resolved "https://registry.yarnpkg.com/react-h5-audio-player/-/react-h5-audio-player-3.9.3.tgz#8214f5f0b775ddf79a2f6455f8ab2e16acb81b57"
+  integrity sha512-D92SbCk6AJAsXYQ2qJqxeAvEjRXBQHY2q6dIZLaLL74eZi7VfynC0/EspHHbFDqBXDq7o2xNFH1Vas+HyXeE/w==
   dependencies:
     "@babel/runtime" "^7.10.2"
     "@iconify/react" "^4.1.1"
