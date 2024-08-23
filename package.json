@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "@styled-icons/simple-icons": "10.46.0",
-    "@testing-library/jest-dom": "6.4.8",
+    "@testing-library/jest-dom": "6.5.0",
     "axios": "1.7.5",
     "leaflet": "1.9.4",
     "next": "latest",
